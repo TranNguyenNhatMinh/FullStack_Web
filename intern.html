@@ -1,0 +1,1554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Full Stack Study Guide — HTML · CSS · JS · SQL · PHP · React · Bootstrap</title>
+  <link rel="stylesheet" href="intern.css" />
+</head>
+<body>
+
+<!-- MOBILE MENU BUTTON -->
+<button class="menu-toggle" onclick="toggleSidebar()">☰</button>
+<div class="sidebar-overlay" id="overlay" onclick="toggleSidebar()"></div>
+
+<!-- ════════════ SIDEBAR ════════════ -->
+<nav class="sidebar" id="sidebar">
+  <div class="sidebar-logo">
+    Full Stack Study Guide
+    <span>HTML · CSS · JS · SQL · PHP · React · Bootstrap</span>
+  </div>
+
+  <div class="chapter-nav">
+
+    <!-- HTML -->
+    <div class="chapter-label" style="color:#e34c26">
+      <div class="chapter-icon-dot" style="background:#e34c26"></div> 1.1 HTML
+    </div>
+    <div class="chapter-links">
+      <a href="#html-structure">Structure</a>
+      <a href="#html-meta">Meta Tags</a>
+      <a href="#html-text">Text & Blocks</a>
+      <a href="#html-links">Links & Images</a>
+      <a href="#html-lists">Lists</a>
+      <a href="#html-forms">Form Basics</a>
+      <a href="#html-inputs">Input Types</a>
+      <a href="#html-attrs">Attributes</a>
+      <a href="#html-buttons">Buttons</a>
+      <a href="#html-select">Select & Textarea</a>
+      <a href="#html-tables">Tables</a>
+      <a href="#html-semantic">Semantic HTML</a>
+      <a href="#html-data">Data Attributes</a>
+    </div>
+
+    <div class="sidebar-divider"></div>
+
+    <!-- CSS -->
+    <div class="chapter-label" style="color:#60a5fa">
+      <div class="chapter-icon-dot" style="background:#3b82f6"></div> 1.2 CSS
+    </div>
+    <div class="chapter-links">
+      <a href="#css-adding">Adding CSS</a>
+      <a href="#css-selectors">Selectors</a>
+      <a href="#css-boxmodel">Box Model</a>
+      <a href="#css-colors">Colors & Text</a>
+      <a href="#css-display">Display</a>
+      <a href="#css-flexbox">Flexbox</a>
+      <a href="#css-grid">Grid</a>
+      <a href="#css-position">Position</a>
+      <a href="#css-responsive">Responsive</a>
+      <a href="#css-pseudo">Pseudo-classes</a>
+      <a href="#css-transition">Transitions</a>
+    </div>
+
+    <div class="sidebar-divider"></div>
+
+    <!-- JS -->
+    <div class="chapter-label" style="color:#fbbf24">
+      <div class="chapter-icon-dot" style="background:#ca8a04"></div> 1.3 JavaScript
+    </div>
+    <div class="chapter-links">
+      <a href="#js-variables">Variables</a>
+      <a href="#js-types">Types</a>
+      <a href="#js-operators">Operators</a>
+      <a href="#js-conditions">Conditions</a>
+      <a href="#js-loops">Loops</a>
+      <a href="#js-functions">Functions</a>
+      <a href="#js-arrays">Arrays</a>
+      <a href="#js-objects">Objects</a>
+      <a href="#js-parse">parseInt / parseFloat</a>
+      <a href="#js-isnan">isNaN</a>
+      <a href="#js-domselect">DOM – Select</a>
+      <a href="#js-domcontent">DOM – Content</a>
+      <a href="#js-domchange">DOM – Change</a>
+      <a href="#js-domcreate">DOM – Create</a>
+      <a href="#js-events">Events</a>
+      <a href="#js-eventobj">Event Object</a>
+      <a href="#js-json">JSON</a>
+      <a href="#js-storage">localStorage</a>
+      <a href="#js-timeout">setTimeout</a>
+      <a href="#js-fetch">Fetch / Async</a>
+    </div>
+
+    <div class="sidebar-divider"></div>
+
+    <!-- SQL -->
+    <div class="chapter-label" style="color:#38bdf8">
+      <div class="chapter-icon-dot" style="background:#0ea5e9"></div> 1.4 SQL
+    </div>
+    <div class="chapter-links">
+      <a href="#sql-concepts">Concepts</a>
+      <a href="#sql-select">SELECT & WHERE</a>
+      <a href="#sql-crud">INSERT/UPDATE/DELETE</a>
+      <a href="#sql-aggregate">Aggregates & JOIN</a>
+    </div>
+
+    <div class="sidebar-divider"></div>
+
+    <!-- PHP -->
+    <div class="chapter-label" style="color:#818cf8">
+      <div class="chapter-icon-dot" style="background:#6366f1"></div> 1.5 PHP
+    </div>
+    <div class="chapter-links">
+      <a href="#php-syntax">Syntax & Variables</a>
+      <a href="#php-forms">$_GET & $_POST</a>
+      <a href="#php-session">Sessions & DB</a>
+    </div>
+
+    <div class="sidebar-divider"></div>
+
+    <!-- React -->
+    <div class="chapter-label" style="color:#22d3ee">
+      <div class="chapter-icon-dot" style="background:#06b6d4"></div> 1.6 React
+    </div>
+    <div class="chapter-links">
+      <a href="#react-jsx">What is React + JSX</a>
+      <a href="#react-components">Components & Props</a>
+      <a href="#react-state">useState</a>
+    </div>
+
+    <div class="sidebar-divider"></div>
+
+    <!-- Bootstrap -->
+    <div class="chapter-label" style="color:#a78bfa">
+      <div class="chapter-icon-dot" style="background:#7c3aed"></div> 1.7 Bootstrap
+    </div>
+    <div class="chapter-links">
+      <a href="#bs-grid">Grid System</a>
+      <a href="#bs-components">Components & Utilities</a>
+    </div>
+
+  </div>
+</nav>
+
+<!-- ════════════ MAIN CONTENT ════════════ -->
+<div class="main-content">
+
+  <!-- HERO -->
+  <div class="hero">
+    <h1>Full Stack Study Guide</h1>
+    <p>Every topic explained simply with analogies, annotated code examples, and exercises to practice. All 7 subjects in one place.</p>
+    <div class="hero-chips">
+      <span class="hero-chip" style="color:#e34c26;border-color:rgba(227,76,38,0.4)">🌐 HTML</span>
+      <span class="hero-chip" style="color:#60a5fa;border-color:rgba(96,165,250,0.4)">🎨 CSS</span>
+      <span class="hero-chip" style="color:#fbbf24;border-color:rgba(251,191,36,0.4)">⚡ JavaScript</span>
+      <span class="hero-chip" style="color:#38bdf8;border-color:rgba(56,189,248,0.4)">📊 SQL</span>
+      <span class="hero-chip" style="color:#818cf8;border-color:rgba(129,140,248,0.4)">🐘 PHP</span>
+      <span class="hero-chip" style="color:#22d3ee;border-color:rgba(34,211,238,0.4)">⚛️ React</span>
+      <span class="hero-chip" style="color:#a78bfa;border-color:rgba(167,139,250,0.4)">🎨 Bootstrap</span>
+    </div>
+  </div>
+
+<!-- ══════════════════════════════════════════════
+     1.1 HTML
+══════════════════════════════════════════════ -->
+<div class="chapter-section">
+  <div class="chapter-banner" style="background:rgba(227,76,38,0.05);border-bottom-color:rgba(227,76,38,0.2)">
+    <h2><span style="color:#e34c26">🌐</span> 1.1 HTML – Must Know</h2>
+    <p>Structure, semantics, forms — the skeleton of every webpage.</p>
+  </div>
+  <div class="content-area">
+
+    <!-- Structure -->
+    <div class="topic" id="html-structure">
+      <div class="topic-header"><div class="topic-num" style="background:#e34c26">1</div><h3>Document Structure <span class="badge must">Must</span></h3></div>
+      <div class="card">
+        <div class="analogy">🏠 <strong>Analogy:</strong> HTML page = a house. <code>&lt;html&gt;</code> is the whole house. <code>&lt;head&gt;</code> is the attic (settings, invisible). <code>&lt;body&gt;</code> is the living space (everything users see).</div>
+        <div class="code-block"><span class="c-tag">&lt;!DOCTYPE html&gt;</span>          <span class="c-cm">&lt;!-- declares HTML5 --&gt;</span>
+<span class="c-tag">&lt;html</span> <span class="c-attr">lang</span>=<span class="c-val">"en"</span><span class="c-tag">&gt;</span>
+  <span class="c-tag">&lt;head&gt;</span>                   <span class="c-cm">&lt;!-- invisible settings --&gt;</span>
+    <span class="c-tag">&lt;meta</span> <span class="c-attr">charset</span>=<span class="c-val">"UTF-8"</span><span class="c-tag">&gt;</span>
+    <span class="c-tag">&lt;title&gt;</span>My Page<span class="c-tag">&lt;/title&gt;</span>
+  <span class="c-tag">&lt;/head&gt;</span>
+  <span class="c-tag">&lt;body&gt;</span>                   <span class="c-cm">&lt;!-- everything visible --&gt;</span>
+    <span class="c-tag">&lt;h1&gt;</span>Hello World!<span class="c-tag">&lt;/h1&gt;</span>
+  <span class="c-tag">&lt;/body&gt;</span>
+<span class="c-tag">&lt;/html&gt;</span></div>
+        <div class="tip"><strong>💡 Rule:</strong> <code>&lt;!DOCTYPE html&gt;</code> must be the very first line — no exceptions.</div>
+      </div>
+      <div class="exercise-box"><h4>✏️ Exercise</h4><ol>
+        <li>Create <code>index.html</code> from scratch — type the full skeleton without copy-pasting. Add an h1 with your name.</li>
+        <li>Remove <code>&lt;!DOCTYPE html&gt;</code> and reload. Check DevTools — browser enters "quirks mode".</li>
+        <li>Check the browser tab — does it show the title?</li>
+      </ol></div>
+    </div>
+
+    <!-- Meta -->
+    <div class="topic" id="html-meta">
+      <div class="topic-header"><div class="topic-num" style="background:#e34c26">2</div><h3>Meta Tags <span class="badge must">Must</span></h3></div>
+      <div class="card">
+        <div class="analogy">📦 <strong>Analogy:</strong> Meta tags are the label on a package — they tell the browser what's inside and how to handle it, without being visible content.</div>
+        <div class="code-block"><span class="c-tag">&lt;head&gt;</span>
+  <span class="c-tag">&lt;meta</span> <span class="c-attr">charset</span>=<span class="c-val">"UTF-8"</span><span class="c-tag">&gt;</span>                                   <span class="c-cm">&lt;!-- supports all languages + emoji --&gt;</span>
+  <span class="c-tag">&lt;meta</span> <span class="c-attr">name</span>=<span class="c-val">"viewport"</span> <span class="c-attr">content</span>=<span class="c-val">"width=device-width, initial-scale=1.0"</span><span class="c-tag">&gt;</span> <span class="c-cm">&lt;!-- mobile-friendly --&gt;</span>
+  <span class="c-tag">&lt;title&gt;</span>My Awesome Page<span class="c-tag">&lt;/title&gt;</span>                           <span class="c-cm">&lt;!-- browser tab text --&gt;</span>
+  <span class="c-tag">&lt;meta</span> <span class="c-attr">name</span>=<span class="c-val">"description"</span> <span class="c-attr">content</span>=<span class="c-val">"About HTML basics"</span><span class="c-tag">&gt;</span> <span class="c-cm">&lt;!-- Google preview --&gt;</span>
+<span class="c-tag">&lt;/head&gt;</span></div>
+        <div class="warn"><strong>⚠️</strong> Without viewport meta, your page looks tiny and zoomed-out on mobile. Always include it.</div>
+      </div>
+      <div class="exercise-box"><h4>✏️ Exercise</h4><ol>
+        <li>Add all 3 essentials: charset, viewport, title. Change the title and confirm it shows in the tab.</li>
+        <li>Remove viewport, use DevTools (F12 → Toggle Device Toolbar). See the difference? Add it back.</li>
+      </ol></div>
+    </div>
+
+    <!-- Text & Blocks -->
+    <div class="topic" id="html-text">
+      <div class="topic-header"><div class="topic-num" style="background:#e34c26">3</div><h3>Text &amp; Blocks <span class="badge must">Must</span></h3></div>
+      <div class="card">
+        <div class="analogy">📦 <strong>Analogy:</strong> <code>div</code> is a cardboard box (block-level — takes the full row). <code>span</code> is a sticky note (inline — only as wide as its content).</div>
+        <div class="code-block"><span class="c-tag">&lt;h1&gt;</span>Main Title (use once)<span class="c-tag">&lt;/h1&gt;</span>
+<span class="c-tag">&lt;h2&gt;</span>Section<span class="c-tag">&lt;/h2&gt;</span>  <span class="c-tag">&lt;h3&gt;</span>Sub<span class="c-tag">&lt;/h3&gt;</span>  <span class="c-cm">&lt;!-- h1–h6 hierarchy --&gt;</span>
+<span class="c-tag">&lt;p&gt;</span>A paragraph. Has spacing above and below.<span class="c-tag">&lt;/p&gt;</span>
+<span class="c-tag">&lt;p&gt;</span>Line one.<span class="c-tag">&lt;br&gt;</span>Line two (same paragraph).<span class="c-tag">&lt;/p&gt;</span>
+<span class="c-tag">&lt;hr&gt;</span>                    <span class="c-cm">&lt;!-- horizontal divider --&gt;</span>
+<span class="c-tag">&lt;div&gt;</span>Block container<span class="c-tag">&lt;/div&gt;</span>       <span class="c-cm">&lt;!-- starts on new line, full width --&gt;</span>
+<span class="c-tag">&lt;span&gt;</span>Inline<span class="c-tag">&lt;/span&gt;</span> in text    <span class="c-cm">&lt;!-- stays inline --&gt;</span></div>
+        <div class="tip"><strong>💡 Rule:</strong> Use <code>div</code> to group sections. Use <code>span</code> to style a word inside text.</div>
+      </div>
+      <div class="exercise-box"><h4>✏️ Exercise</h4><ol>
+        <li>Create a mini blog with h1, two h2s, three p tags, and hr between sections.</li>
+        <li>Use <code>&lt;span style="color:blue"&gt;</code> to color one word inside a paragraph.</li>
+        <li>Put two divs side by side? They stack! Put two spans? They sit next to each other. Understand the difference.</li>
+      </ol></div>
+    </div>
+
+    <!-- Links & Images -->
+    <div class="topic" id="html-links">
+      <div class="topic-header"><div class="topic-num" style="background:#e34c26">4</div><h3>Links &amp; Images <span class="badge must">Must</span></h3></div>
+      <div class="card">
+        <div class="code-block"><span class="c-tag">&lt;a</span> <span class="c-attr">href</span>=<span class="c-val">"https://google.com"</span><span class="c-tag">&gt;</span>Go to Google<span class="c-tag">&lt;/a&gt;</span>
+<span class="c-tag">&lt;a</span> <span class="c-attr">href</span>=<span class="c-val">"https://google.com"</span> <span class="c-attr">target</span>=<span class="c-val">"_blank"</span><span class="c-tag">&gt;</span>Open in New Tab<span class="c-tag">&lt;/a&gt;</span>
+<span class="c-tag">&lt;a</span> <span class="c-attr">href</span>=<span class="c-val">"about.html"</span><span class="c-tag">&gt;</span>Local page<span class="c-tag">&lt;/a&gt;</span>
+<span class="c-tag">&lt;a</span> <span class="c-attr">href</span>=<span class="c-val">"#contact"</span><span class="c-tag">&gt;</span>Jump to #contact section<span class="c-tag">&lt;/a&gt;</span>
+<span class="c-tag">&lt;a</span> <span class="c-attr">href</span>=<span class="c-val">"mailto:hi@example.com"</span><span class="c-tag">&gt;</span>Email Me<span class="c-tag">&lt;/a&gt;</span>
+
+<span class="c-tag">&lt;img</span> <span class="c-attr">src</span>=<span class="c-val">"cat.jpg"</span> <span class="c-attr">alt</span>=<span class="c-val">"A fluffy orange cat"</span><span class="c-tag">&gt;</span>       <span class="c-cm">&lt;!-- always include alt --&gt;</span>
+<span class="c-tag">&lt;img</span> <span class="c-attr">src</span>=<span class="c-val">"https://placecats.com/300/200"</span> <span class="c-attr">alt</span>=<span class="c-val">"cat"</span><span class="c-tag">&gt;</span>
+
+<span class="c-cm">&lt;!-- Clickable image --&gt;</span>
+<span class="c-tag">&lt;a</span> <span class="c-attr">href</span>=<span class="c-val">"https://google.com"</span><span class="c-tag">&gt;&lt;img</span> <span class="c-attr">src</span>=<span class="c-val">"logo.png"</span> <span class="c-attr">alt</span>=<span class="c-val">"Go to Google"</span><span class="c-tag">&gt;&lt;/a&gt;</span></div>
+        <div class="warn"><strong>⚠️ Never skip alt!</strong> It helps screen readers and shows when the image fails to load.</div>
+      </div>
+      <div class="exercise-box"><h4>✏️ Exercise</h4><ol>
+        <li>Create 3 links: to Google (new tab), a local file, and a jump to an id on the same page.</li>
+        <li>Add an image. Break the src on purpose — see how alt text shows up instead.</li>
+        <li>Make the image clickable by wrapping in an &lt;a&gt; tag.</li>
+      </ol></div>
+    </div>
+
+    <!-- Lists -->
+    <div class="topic" id="html-lists">
+      <div class="topic-header"><div class="topic-num" style="background:#e34c26">5</div><h3>Lists <span class="badge must">Must</span></h3></div>
+      <div class="card">
+        <div class="analogy">📋 <strong>Analogy:</strong> <code>ul</code> = shopping list (order doesn't matter — bullets). <code>ol</code> = recipe steps (order matters — numbers).</div>
+        <div class="code-block"><span class="c-tag">&lt;ul&gt;</span>  <span class="c-tag">&lt;li&gt;</span>Apple<span class="c-tag">&lt;/li&gt;</span>  <span class="c-tag">&lt;li&gt;</span>Banana<span class="c-tag">&lt;/li&gt;</span>  <span class="c-tag">&lt;/ul&gt;</span>  <span class="c-cm">&lt;!-- bullets --&gt;</span>
+<span class="c-tag">&lt;ol&gt;</span>  <span class="c-tag">&lt;li&gt;</span>Boil water<span class="c-tag">&lt;/li&gt;</span>  <span class="c-tag">&lt;li&gt;</span>Add pasta<span class="c-tag">&lt;/li&gt;</span>  <span class="c-tag">&lt;/ol&gt;</span> <span class="c-cm">&lt;!-- numbers --&gt;</span>
+
+<span class="c-cm">&lt;!-- Nested list --&gt;</span>
+<span class="c-tag">&lt;ul&gt;</span>
+  <span class="c-tag">&lt;li&gt;</span>Fruits
+    <span class="c-tag">&lt;ul&gt;</span><span class="c-tag">&lt;li&gt;</span>Mango<span class="c-tag">&lt;/li&gt;</span><span class="c-tag">&lt;li&gt;</span>Grape<span class="c-tag">&lt;/li&gt;</span><span class="c-tag">&lt;/ul&gt;</span>
+  <span class="c-tag">&lt;/li&gt;</span>
+<span class="c-tag">&lt;/ul&gt;</span></div>
+      </div>
+      <div class="exercise-box"><h4>✏️ Exercise</h4><ol>
+        <li>Make a ul of 5 favourite movies, ol of steps to make coffee.</li>
+        <li>Create a nested list: Programming Languages → (JavaScript → Node/React, Python → Django/Flask).</li>
+        <li>Build a nav using ul + li + a. This is how real navbars are structured.</li>
+      </ol></div>
+    </div>
+
+    <!-- Forms -->
+    <div class="topic" id="html-forms">
+      <div class="topic-header"><div class="topic-num" style="background:#e34c26">6</div><h3>Form Basics <span class="badge must">Must</span></h3></div>
+      <div class="card">
+        <div class="analogy">📮 <strong>Analogy:</strong> A form is an envelope. <code>action</code> = where to mail it. <code>method</code> = POST (hand-deliver, hidden) vs GET (postcard, data visible in URL).</div>
+        <div class="code-block"><span class="c-tag">&lt;form</span> <span class="c-attr">action</span>=<span class="c-val">"/submit"</span> <span class="c-attr">method</span>=<span class="c-val">"post"</span><span class="c-tag">&gt;</span>
+  <span class="c-tag">&lt;label</span> <span class="c-attr">for</span>=<span class="c-val">"name"</span><span class="c-tag">&gt;</span>Name:<span class="c-tag">&lt;/label&gt;</span>   <span class="c-cm">&lt;!-- for + id links label to input --&gt;</span>
+  <span class="c-tag">&lt;input</span> <span class="c-attr">type</span>=<span class="c-val">"text"</span> <span class="c-attr">id</span>=<span class="c-val">"name"</span> <span class="c-attr">name</span>=<span class="c-val">"name"</span><span class="c-tag">&gt;</span>
+  <span class="c-tag">&lt;button</span> <span class="c-attr">type</span>=<span class="c-val">"submit"</span><span class="c-tag">&gt;</span>Send<span class="c-tag">&lt;/button&gt;</span>
+<span class="c-tag">&lt;/form&gt;</span>
+
+<span class="c-cm">&lt;!-- GET: for search (data in URL, bookmarkable)
+     POST: for login/signup (data hidden in request body) --&gt;</span></div>
+      </div>
+      <div class="exercise-box"><h4>✏️ Exercise</h4><ol>
+        <li>Build a login form with username + password fields. Use method="post".</li>
+        <li>Build a search form with method="get". Submit it — watch the URL change to show your query.</li>
+        <li>Click a label — does it focus the input? That's the for/id connection working.</li>
+      </ol></div>
+    </div>
+
+    <!-- Input Types -->
+    <div class="topic" id="html-inputs">
+      <div class="topic-header"><div class="topic-num" style="background:#e34c26">7</div><h3>Input Types <span class="badge must">Must</span></h3></div>
+      <div class="card">
+        <div class="code-block"><span class="c-tag">&lt;input</span> <span class="c-attr">type</span>=<span class="c-val">"text"</span>     <span class="c-attr">placeholder</span>=<span class="c-val">"Your name"</span><span class="c-tag">&gt;</span>
+<span class="c-tag">&lt;input</span> <span class="c-attr">type</span>=<span class="c-val">"password"</span> <span class="c-attr">placeholder</span>=<span class="c-val">"••••••"</span><span class="c-tag">&gt;</span>
+<span class="c-tag">&lt;input</span> <span class="c-attr">type</span>=<span class="c-val">"email"</span>    <span class="c-attr">placeholder</span>=<span class="c-val">"you@email.com"</span><span class="c-tag">&gt;</span>  <span class="c-cm">&lt;!-- validates format --&gt;</span>
+<span class="c-tag">&lt;input</span> <span class="c-attr">type</span>=<span class="c-val">"number"</span>   <span class="c-attr">min</span>=<span class="c-val">"0"</span> <span class="c-attr">max</span>=<span class="c-val">"100"</span><span class="c-tag">&gt;</span>
+<span class="c-tag">&lt;input</span> <span class="c-attr">type</span>=<span class="c-val">"checkbox"</span> <span class="c-attr">name</span>=<span class="c-val">"agree"</span> <span class="c-attr">value</span>=<span class="c-val">"yes"</span><span class="c-tag">&gt;</span> I agree
+
+<span class="c-cm">&lt;!-- Radio: same name = one group, pick exactly ONE --&gt;</span>
+<span class="c-tag">&lt;input</span> <span class="c-attr">type</span>=<span class="c-val">"radio"</span> <span class="c-attr">name</span>=<span class="c-val">"size"</span> <span class="c-attr">value</span>=<span class="c-val">"S"</span><span class="c-tag">&gt;</span> S
+<span class="c-tag">&lt;input</span> <span class="c-attr">type</span>=<span class="c-val">"radio"</span> <span class="c-attr">name</span>=<span class="c-val">"size"</span> <span class="c-attr">value</span>=<span class="c-val">"M"</span><span class="c-tag">&gt;</span> M
+<span class="c-tag">&lt;input</span> <span class="c-attr">type</span>=<span class="c-val">"radio"</span> <span class="c-attr">name</span>=<span class="c-val">"size"</span> <span class="c-attr">value</span>=<span class="c-val">"L"</span><span class="c-tag">&gt;</span> L</div>
+        <div class="tip"><strong>💡 Checkbox vs Radio:</strong> Checkboxes = "pick any". Radio = "pick exactly one" (share same name attribute).</div>
+      </div>
+      <div class="exercise-box"><h4>✏️ Exercise</h4><ol>
+        <li>Build a registration form: name, email, age (number), password, confirm password.</li>
+        <li>Add a required "I agree" checkbox with <code>required</code> attribute.</li>
+        <li>Try submitting an email input with invalid text. Browser validates automatically!</li>
+      </ol></div>
+    </div>
+
+    <!-- Attributes -->
+    <div class="topic" id="html-attrs">
+      <div class="topic-header"><div class="topic-num" style="background:#e34c26">8</div><h3>Attributes: id vs class <span class="badge must">Must</span></h3></div>
+      <div class="card">
+        <div class="analogy">🆔 <strong>Analogy:</strong> <code>id</code> = Social Security Number — unique to one person. <code>class</code> = job title — many people can share the same one.</div>
+        <div class="compare">
+          <div class="compare-item">
+            <h5>id — unique</h5>
+            <div class="code-block"><span class="c-tag">&lt;div</span> <span class="c-attr">id</span>=<span class="c-val">"header"</span><span class="c-tag">&gt;</span>...<span class="c-tag">&lt;/div&gt;</span>
+<span class="c-cm">/* CSS: */</span> #header { }
+<span class="c-cm">/* JS: */</span> getElementById("header")
+<span class="c-cm">/* link: */</span> href="#header"</div>
+          </div>
+          <div class="compare-item">
+            <h5>class — reusable</h5>
+            <div class="code-block"><span class="c-tag">&lt;p</span> <span class="c-attr">class</span>=<span class="c-val">"card"</span><span class="c-tag">&gt;</span>...<span class="c-tag">&lt;/p&gt;</span>
+<span class="c-tag">&lt;p</span> <span class="c-attr">class</span>=<span class="c-val">"card active"</span><span class="c-tag">&gt;</span>...<span class="c-tag">&lt;/p&gt;</span>
+<span class="c-cm">/* CSS: */</span> .card { }
+<span class="c-cm">/* multiple classes ok */</span></div>
+          </div>
+        </div>
+        <div class="code-block"><span class="c-cm">&lt;!-- name: key when form is submitted --&gt;</span>
+<span class="c-tag">&lt;input</span> <span class="c-attr">name</span>=<span class="c-val">"username"</span><span class="c-tag">&gt;</span>  <span class="c-cm">&lt;!-- submits as: username=alice --&gt;</span>
+<span class="c-cm">&lt;!-- value: submitted value (or default/prefilled) --&gt;</span>
+<span class="c-tag">&lt;input</span> <span class="c-attr">value</span>=<span class="c-val">"Alice"</span><span class="c-tag">&gt;</span>
+<span class="c-cm">&lt;!-- placeholder: ghost text, disappears on type --&gt;</span>
+<span class="c-tag">&lt;input</span> <span class="c-attr">placeholder</span>=<span class="c-val">"Enter email..."</span><span class="c-tag">&gt;</span></div>
+      </div>
+      <div class="exercise-box"><h4>✏️ Exercise</h4><ol>
+        <li>Create 3 paragraphs sharing class "highlight". Style them all orange. Give one an id="special" — style it gold. See how id overrides class.</li>
+        <li>Use method="get" and name attributes on inputs. Submit — see how names become URL keys.</li>
+      </ol></div>
+    </div>
+
+    <!-- Buttons -->
+    <div class="topic" id="html-buttons">
+      <div class="topic-header"><div class="topic-num" style="background:#e34c26">9</div><h3>Buttons <span class="badge must">Must</span></h3></div>
+      <div class="card">
+        <div class="code-block"><span class="c-tag">&lt;button</span> <span class="c-attr">type</span>=<span class="c-val">"submit"</span><span class="c-tag">&gt;</span>Submit Form<span class="c-tag">&lt;/button&gt;</span>       <span class="c-cm">&lt;!-- submits the form --&gt;</span>
+<span class="c-tag">&lt;button</span> <span class="c-attr">type</span>=<span class="c-val">"button"</span><span class="c-tag">&gt;</span>Do Something with JS<span class="c-tag">&lt;/button&gt;</span> <span class="c-cm">&lt;!-- does nothing by default --&gt;</span>
+<span class="c-tag">&lt;button</span> <span class="c-attr">type</span>=<span class="c-val">"reset"</span><span class="c-tag">&gt;</span>Clear Form<span class="c-tag">&lt;/button&gt;</span>          <span class="c-cm">&lt;!-- clears all fields --&gt;</span></div>
+        <div class="warn"><strong>⚠️ Gotcha!</strong> A <code>&lt;button&gt;</code> inside a <code>&lt;form&gt;</code> defaults to <code>type="submit"</code> even without the attribute! Always be explicit.</div>
+      </div>
+      <div class="exercise-box"><h4>✏️ Exercise</h4><ol>
+        <li>Form with submit + reset buttons. Fill the form, click Reset. All cleared.</li>
+        <li>Remove <code>type</code> from a button inside a form. Click it — it submits! Now you know why type matters.</li>
+      </ol></div>
+    </div>
+
+    <!-- Select & Textarea -->
+    <div class="topic" id="html-select">
+      <div class="topic-header"><div class="topic-num" style="background:#e34c26">10</div><h3>Select &amp; Textarea <span class="badge should">Should</span></h3></div>
+      <div class="card">
+        <div class="code-block"><span class="c-tag">&lt;select</span> <span class="c-attr">name</span>=<span class="c-val">"country"</span><span class="c-tag">&gt;</span>
+  <span class="c-tag">&lt;option</span> <span class="c-attr">value</span>=<span class="c-val">""</span><span class="c-tag">&gt;</span>-- Choose --<span class="c-tag">&lt;/option&gt;</span>
+  <span class="c-tag">&lt;option</span> <span class="c-attr">value</span>=<span class="c-val">"vn"</span><span class="c-tag">&gt;</span>Vietnam<span class="c-tag">&lt;/option&gt;</span>
+  <span class="c-tag">&lt;option</span> <span class="c-attr">value</span>=<span class="c-val">"us"</span> <span class="c-attr">selected</span><span class="c-tag">&gt;</span>United States<span class="c-tag">&lt;/option&gt;</span>
+<span class="c-tag">&lt;/select&gt;</span>
+
+<span class="c-cm">&lt;!-- Note: textarea is NOT self-closing! --&gt;</span>
+<span class="c-tag">&lt;textarea</span> <span class="c-attr">name</span>=<span class="c-val">"msg"</span> <span class="c-attr">rows</span>=<span class="c-val">"5"</span> <span class="c-attr">placeholder</span>=<span class="c-val">"Message..."</span><span class="c-tag">&gt;&lt;/textarea&gt;</span></div>
+      </div>
+      <div class="exercise-box"><h4>✏️ Exercise</h4><ol>
+        <li>Build a Contact form with name, email, subject (select), message (textarea 6 rows).</li>
+        <li>Note: select sends the <code>value</code> attribute, not the display text — test with GET method.</li>
+      </ol></div>
+    </div>
+
+    <!-- Tables -->
+    <div class="topic" id="html-tables">
+      <div class="topic-header"><div class="topic-num" style="background:#e34c26">11</div><h3>Tables <span class="badge should">Should</span></h3></div>
+      <div class="card">
+        <div class="analogy">📊 <strong>Analogy:</strong> A table = a spreadsheet. <code>tr</code> = row. <code>td</code> = data cell. <code>th</code> = header cell (bold, centered). <code>thead</code>/<code>tbody</code> = organizational wrappers.</div>
+        <div class="code-block"><span class="c-tag">&lt;table</span> <span class="c-attr">border</span>=<span class="c-val">"1"</span><span class="c-tag">&gt;</span>
+  <span class="c-tag">&lt;thead&gt;</span>
+    <span class="c-tag">&lt;tr&gt;</span><span class="c-tag">&lt;th&gt;</span>Name<span class="c-tag">&lt;/th&gt;</span><span class="c-tag">&lt;th&gt;</span>Age<span class="c-tag">&lt;/th&gt;</span><span class="c-tag">&lt;/tr&gt;</span>
+  <span class="c-tag">&lt;/thead&gt;</span>
+  <span class="c-tag">&lt;tbody&gt;</span>
+    <span class="c-tag">&lt;tr&gt;</span><span class="c-tag">&lt;td&gt;</span>Alice<span class="c-tag">&lt;/td&gt;</span><span class="c-tag">&lt;td&gt;</span>25<span class="c-tag">&lt;/td&gt;</span><span class="c-tag">&lt;/tr&gt;</span>
+    <span class="c-tag">&lt;tr&gt;</span><span class="c-tag">&lt;td</span> <span class="c-attr">colspan</span>=<span class="c-val">"2"</span><span class="c-tag">&gt;</span>Merged 2 columns<span class="c-tag">&lt;/td&gt;</span><span class="c-tag">&lt;/tr&gt;</span>
+  <span class="c-tag">&lt;/tbody&gt;</span>
+<span class="c-tag">&lt;/table&gt;</span></div>
+      </div>
+      <div class="exercise-box"><h4>✏️ Exercise</h4><ol>
+        <li>Create a table of 5 movies: Title | Year | Genre | Rating. Use thead/tbody properly.</li>
+        <li>Add a bottom row with colspan="3" for "Average Rating:", leaving one cell for the number.</li>
+      </ol></div>
+    </div>
+
+    <!-- Semantic -->
+    <div class="topic" id="html-semantic">
+      <div class="topic-header"><div class="topic-num" style="background:#e34c26">12</div><h3>Semantic HTML <span class="badge should">Should</span></h3></div>
+      <div class="card">
+        <div class="analogy">🏛️ <strong>Analogy:</strong> Semantic tags are labeled rooms. <code>div</code> = just "room". <code>header</code> = lobby, <code>nav</code> = directory, <code>main</code> = main hall, <code>section</code> = conference room, <code>footer</code> = exit sign. Same layout — but now browsers, SEO bots, and screen readers understand it.</div>
+        <div class="code-block"><span class="c-tag">&lt;header&gt;</span>
+  <span class="c-tag">&lt;h1&gt;</span>My Website<span class="c-tag">&lt;/h1&gt;</span>
+  <span class="c-tag">&lt;nav&gt;</span><span class="c-tag">&lt;ul&gt;</span><span class="c-tag">&lt;li&gt;&lt;a</span> <span class="c-attr">href</span>=<span class="c-val">"/"</span><span class="c-tag">&gt;</span>Home<span class="c-tag">&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</span><span class="c-tag">&lt;/nav&gt;</span>
+<span class="c-tag">&lt;/header&gt;</span>
+<span class="c-tag">&lt;main&gt;</span>
+  <span class="c-tag">&lt;section&gt;</span><span class="c-tag">&lt;h2&gt;</span>About<span class="c-tag">&lt;/h2&gt;</span><span class="c-tag">&lt;p&gt;</span>...<span class="c-tag">&lt;/p&gt;</span><span class="c-tag">&lt;/section&gt;</span>
+  <span class="c-tag">&lt;article&gt;</span><span class="c-tag">&lt;h2&gt;</span>Blog Post<span class="c-tag">&lt;/h2&gt;</span><span class="c-tag">&lt;p&gt;</span>...<span class="c-tag">&lt;/p&gt;</span><span class="c-tag">&lt;/article&gt;</span>
+<span class="c-tag">&lt;/main&gt;</span>
+<span class="c-tag">&lt;footer&gt;</span><span class="c-tag">&lt;p&gt;</span>&amp;copy; 2024<span class="c-tag">&lt;/p&gt;</span><span class="c-tag">&lt;/footer&gt;</span></div>
+        <div class="tip"><strong>💡 Why it matters:</strong> Better SEO, accessibility for screen readers, and readable code for teammates.</div>
+      </div>
+      <div class="exercise-box"><h4>✏️ Exercise</h4><ol>
+        <li>Take a page built with only divs. Refactor using header, nav, main, section, footer.</li>
+        <li>Build a blog layout: header + nav, main with 2 articles, aside sidebar, footer.</li>
+      </ol></div>
+    </div>
+
+    <!-- Data Attributes -->
+    <div class="topic" id="html-data">
+      <div class="topic-header"><div class="topic-num" style="background:#e34c26">13</div><h3>Data Attributes <span class="badge nice">Nice</span></h3></div>
+      <div class="card">
+        <div class="analogy">🗂️ <strong>Analogy:</strong> Data attributes are sticky notes on HTML elements — invisible to the user but readable by JavaScript.</div>
+        <div class="code-block"><span class="c-tag">&lt;button</span> <span class="c-attr">data-action</span>=<span class="c-val">"delete"</span> <span class="c-attr">data-id</span>=<span class="c-val">"42"</span><span class="c-tag">&gt;</span>Delete<span class="c-tag">&lt;/button&gt;</span>
+
+<span class="c-cm">// In JavaScript — data-user-id → dataset.userId (camelCase)</span>
+<span class="c-kw">const</span> btn = document.<span class="c-fn">querySelector</span>(<span class="c-str">"button"</span>);
+btn.dataset.action; <span class="c-cm">// "delete"</span>
+btn.dataset.id;     <span class="c-cm">// "42"</span></div>
+      </div>
+      <div class="exercise-box"><h4>✏️ Exercise</h4><ol>
+        <li>Create 3 product li items with data-id, data-price, data-category.</li>
+        <li>Add a button in each. On click, read data-id and alert "Added product #[id]!"</li>
+      </ol></div>
+    </div>
+
+  </div><!-- /content-area -->
+</div><!-- /chapter HTML -->
+
+<div class="chapter-divider"></div>
+
+<!-- ══════════════════════════════════════════════
+     1.2 CSS
+══════════════════════════════════════════════ -->
+<div class="chapter-section">
+  <div class="chapter-banner" style="background:rgba(59,130,246,0.05);border-bottom-color:rgba(59,130,246,0.2)">
+    <h2><span style="color:#3b82f6">🎨</span> 1.2 CSS – Must Know</h2>
+    <p>Styling, layout, flexbox, responsive design — from selectors to media queries.</p>
+  </div>
+  <div class="content-area">
+
+    <div class="topic" id="css-adding">
+      <div class="topic-header"><div class="topic-num" style="background:#3b82f6">1</div><h3>Adding CSS <span class="badge must">Must</span></h3></div>
+      <div class="card">
+        <div class="analogy">👗 <strong>Analogy:</strong> Inline = one custom outfit. Internal &lt;style&gt; = dress code for one building. External .css = company-wide dress code across all pages.</div>
+        <div class="code-block"><span class="c-cm">/* 1. Inline — one element only */</span>
+&lt;p style=<span class="c-val">"color:red"</span>&gt;Red&lt;/p&gt;
+
+<span class="c-cm">/* 2. Internal — all elements on this page */</span>
+&lt;style&gt; p { color: blue; } &lt;/style&gt;
+
+<span class="c-cm">/* 3. External — best for real projects */</span>
+&lt;link rel=<span class="c-val">"stylesheet"</span> href=<span class="c-val">"styles.css"</span>&gt;
+<span class="c-cm">/* Priority: Inline > Internal > External */</span></div>
+        <div class="tip"><strong>💡</strong> Always put <code>* { box-sizing: border-box; margin: 0; padding: 0; }</code> at the top of every CSS file — the universal reset.</div>
+      </div>
+      <div class="exercise-box"><h4>✏️ Exercise</h4><ol>
+        <li>Create index.html + styles.css. Link them. Add a rule making h1 blue.</li>
+        <li>Add inline style (color: red) on a p. Also add CSS rule (color: green). Which wins? Why?</li>
+      </ol></div>
+    </div>
+
+    <div class="topic" id="css-selectors">
+      <div class="topic-header"><div class="topic-num" style="background:#3b82f6">2</div><h3>Selectors <span class="badge must">Must</span></h3></div>
+      <div class="card">
+        <div class="analogy">🎯 <strong>Analogy:</strong> Element = target everyone in a blue shirt. Class = target everyone with a VIP badge. ID = target exactly one person with a unique ID card.</div>
+        <div class="code-block">p { color: gray; }           <span class="c-cm">/* all &lt;p&gt; */</span>
+.highlight { background: yellow; }  <span class="c-cm">/* class */</span>
+#header { background: navy; }       <span class="c-cm">/* id (unique) */</span>
+
+p.highlight { ... }    <span class="c-cm">/* p with class "highlight" */</span>
+div, p, span { ... }   <span class="c-cm">/* multiple elements */</span>
+div p { ... }          <span class="c-cm">/* p inside div (descendant) */</span>
+div > p { ... }        <span class="c-cm">/* direct child p of div */</span>
+
+<span class="c-cm">/* Specificity: ID(100) > Class(10) > Element(1) */</span></div>
+      </div>
+      <div class="exercise-box"><h4>✏️ Exercise</h4><ol>
+        <li>4 paragraphs — element selector makes all gray, class="special" makes 2 red. See class override element.</li>
+        <li>Give one paragraph id="unique" with gold background — see id win over class.</li>
+        <li>Descendant selector: <code>.box p { color: red }</code> — only affects p inside .box divs.</li>
+      </ol></div>
+    </div>
+
+    <div class="topic" id="css-boxmodel">
+      <div class="topic-header"><div class="topic-num" style="background:#3b82f6">3</div><h3>Box Model <span class="badge must">Must</span></h3></div>
+      <div class="card">
+        <div class="analogy">📦 <strong>Analogy:</strong> Shipping a fragile item. Content = the item. Padding = bubble wrap (inside). Border = cardboard walls. Margin = space between boxes on the shelf.</div>
+        <div class="bm-wrap">
+          <div class="bm-margin"><div class="bm-border"><div class="bm-padding"><div class="bm-content">Content</div></div></div></div>
+          <div class="bm-labels">
+            <span><div class="dot" style="background:rgba(255,107,107,0.5);border:1px dashed #ff6b6b"></div>Margin (outside)</span>
+            <span><div class="dot" style="background:rgba(250,204,21,0.5)"></div>Border</span>
+            <span><div class="dot" style="background:rgba(0,201,167,0.5);border:1px dashed #00c9a7"></div>Padding (inside)</span>
+            <span><div class="dot" style="background:rgba(59,130,246,0.5)"></div>Content</span>
+          </div>
+        </div>
+        <div class="code-block">.box {
+  width: 300px; height: 200px;
+  padding: 20px;           <span class="c-cm">/* all sides */</span>
+  padding: 10px 20px;      <span class="c-cm">/* top/bottom  left/right */</span>
+  margin: 0 auto;          <span class="c-cm">/* center horizontally! */</span>
+  border: 2px solid black;
+  border-radius: 8px;
+  box-sizing: border-box;  <span class="c-cm">/* padding included in width */</span>
+}</div>
+        <div class="warn"><strong>⚠️</strong> Default: padding ADDS to width. 300px + 20px padding = 340px wide! Fix: <code>* { box-sizing: border-box }</code></div>
+      </div>
+      <div class="exercise-box"><h4>✏️ Exercise</h4><ol>
+        <li>Create a div (200px wide, 20px padding). Without box-sizing, check rendered width in DevTools. With box-sizing, check again.</li>
+        <li>Center a fixed-width div with <code>margin: 0 auto</code>. This is one of the most used CSS patterns ever.</li>
+      </ol></div>
+    </div>
+
+    <div class="topic" id="css-colors">
+      <div class="topic-header"><div class="topic-num" style="background:#3b82f6">4</div><h3>Colors &amp; Text <span class="badge must">Must</span></h3></div>
+      <div class="card">
+        <div class="code-block">body {
+  font-family: <span class="c-val">'Segoe UI', Arial, sans-serif</span>; <span class="c-cm">/* stack of fallbacks */</span>
+  font-size: 16px;     color: #333;    background-color: #f9f9f9;
+}
+h1 {
+  font-size: 2rem;     <span class="c-cm">/* 2x base = 32px */</span>
+  font-weight: 700;    text-align: center;
+  text-decoration: none; line-height: 1.5; letter-spacing: 1px;
+}
+<span class="c-cm">/* Color formats: */</span>
+color: red;               <span class="c-cm">/* named */</span>
+color: #ff0000;           <span class="c-cm">/* hex (most common) */</span>
+color: rgb(255, 0, 0);   <span class="c-cm">/* RGB */</span>
+color: rgba(255,0,0,0.5);<span class="c-cm">/* RGB + opacity 0-1 */</span></div>
+      </div>
+      <div class="exercise-box"><h4>✏️ Exercise</h4><ol>
+        <li>Set a base font-family on body. Style h1–h3 with different rem sizes.</li>
+        <li>Import a Google Font (Poppins), apply it to the body.</li>
+        <li>Build a card: white bg, dark text, 1px gray border, 8px border-radius. Fundamental pattern!</li>
+      </ol></div>
+    </div>
+
+    <div class="topic" id="css-display">
+      <div class="topic-header"><div class="topic-num" style="background:#3b82f6">5</div><h3>Display <span class="badge must">Must</span></h3></div>
+      <div class="card">
+        <div class="analogy">🚦 <strong>Analogy:</strong> <code>block</code> = takes the whole sidewalk. <code>inline</code> = squeezes next to others (can't set width/height). <code>inline-block</code> = stays in row AND respects width/height. <code>none</code> = disappears completely.</div>
+        <div class="code-block">display: block;        <span class="c-cm">/* full width, new line (div, p, h1) */</span>
+display: inline;       <span class="c-cm">/* content width only, no w/h control */</span>
+display: inline-block; <span class="c-cm">/* inline + respects width/height */</span>
+display: none;         <span class="c-cm">/* hidden, removed from layout */</span>
+visibility: hidden;    <span class="c-cm">/* hidden BUT space is kept */</span></div>
+      </div>
+      <div class="exercise-box"><h4>✏️ Exercise</h4><ol>
+        <li>3 spans: normally side-by-side. Add <code>display:block</code> — they stack. Try <code>inline-block</code> + width — side by side with size.</li>
+        <li>Build a horizontal nav bar using ul + li with <code>display: inline-block</code>.</li>
+        <li>Create a modal div with class="hidden" (display:none). Button toggles the class to show/hide it.</li>
+      </ol></div>
+    </div>
+
+    <div class="topic" id="css-flexbox">
+      <div class="topic-header"><div class="topic-num" style="background:#3b82f6">6</div><h3>Flexbox <span class="badge must">Must</span></h3></div>
+      <div class="card">
+        <div class="analogy">📏 <strong>Analogy:</strong> Flexbox is a rubber-band container. <code>justify-content</code> = how to distribute children along the main axis (horizontal by default). <code>align-items</code> = how to align them on the cross axis (vertical by default).</div>
+        <div class="code-block">.container {
+  display: flex;
+  justify-content: flex-start;   <span class="c-cm">/* left (default) */</span>
+  justify-content: center;       <span class="c-cm">/* center horizontally */</span>
+  justify-content: space-between;<span class="c-cm">/* max space between */</span>
+  align-items: center;           <span class="c-cm">/* center vertically */</span>
+  align-items: flex-start;       <span class="c-cm">/* top */</span>
+  flex-direction: row;           <span class="c-cm">/* default: left→right */</span>
+  flex-direction: column;        <span class="c-cm">/* top→bottom (axes SWAP!) */</span>
+  flex-wrap: wrap;               <span class="c-cm">/* allow multi-line */</span>
+  gap: 16px;                     <span class="c-cm">/* space between items */</span>
+}
+.item { flex: 1; }               <span class="c-cm">/* grow equally to fill space */</span>
+
+<span class="c-cm">/* ⭐ The most used pattern — center anything: */</span>
+.center { display:flex; justify-content:center; align-items:center; height:100vh; }</div>
+        <div class="tip"><strong>💡 Remember:</strong> When flex-direction is column, justify-content becomes vertical and align-items becomes horizontal — they swap!</div>
+      </div>
+      <div class="exercise-box"><h4>✏️ Exercise</h4><ol>
+        <li>5 colored boxes in a flex container. Try every justify-content value one by one.</li>
+        <li>Give parent fixed height. Try every align-items value.</li>
+        <li>Center a 200×200px div perfectly on screen with flexbox on the body.</li>
+        <li>Navbar: logo left, links right using <code>justify-content: space-between</code>.</li>
+        <li>3-column card layout with <code>flex-wrap: wrap</code> and <code>flex: 1 1 250px</code>. Auto-wraps on mobile!</li>
+      </ol></div>
+    </div>
+
+    <div class="topic" id="css-grid">
+      <div class="topic-header"><div class="topic-num" style="background:#3b82f6">7</div><h3>Grid <span class="badge should">Should</span></h3></div>
+      <div class="card">
+        <div class="analogy">🗺️ <strong>Analogy:</strong> Flexbox = one row/column (1D). Grid = rows AND columns (2D, like a spreadsheet). Use Flex for navbars. Use Grid for page layouts and galleries.</div>
+        <div class="code-block">.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);           <span class="c-cm">/* 3 equal cols */</span>
+  grid-template-columns: 250px 1fr;                <span class="c-cm">/* sidebar + main */</span>
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); <span class="c-cm">/* responsive! */</span>
+  gap: 16px;
+}
+.hero { grid-column: 1 / -1; }  <span class="c-cm">/* span ALL columns */</span></div>
+      </div>
+      <div class="exercise-box"><h4>✏️ Exercise</h4><ol>
+        <li>Photo gallery: 9 items, <code>repeat(3, 1fr)</code>, gap 12px.</li>
+        <li>Page layout: header (full), sidebar+main, footer (full) using grid + <code>grid-column: 1/-1</code>.</li>
+        <li>Responsive gallery with one line: <code>repeat(auto-fit, minmax(200px, 1fr))</code>. Resize window — magic!</li>
+      </ol></div>
+    </div>
+
+    <div class="topic" id="css-position">
+      <div class="topic-header"><div class="topic-num" style="background:#3b82f6">8</div><h3>Position <span class="badge should">Should</span></h3></div>
+      <div class="card">
+        <div class="analogy">🗺️ <strong>Analogy:</strong> <code>static</code> = normal flow. <code>relative</code> = shifted from your normal spot (original space reserved). <code>absolute</code> = escaped flow, positioned to nearest positioned ancestor. <code>fixed</code> = glued to the browser window, doesn't scroll.</div>
+        <div class="code-block">.relative { position: relative; top: 20px; left: 10px; }
+<span class="c-cm">/* Absolute inside relative parent: */</span>
+.parent { position: relative; }
+.badge  { position: absolute; top: 8px; right: 8px; }
+<span class="c-cm">/* Sticky navbar: */</span>
+.navbar { position: fixed; top: 0; left: 0; right: 0; z-index: 100; }</div>
+        <div class="tip"><strong>💡 Key trick:</strong> For absolute positioning to work, the parent MUST be <code>position: relative</code>.</div>
+      </div>
+      <div class="exercise-box"><h4>✏️ Exercise</h4><ol>
+        <li>Card with a "NEW" badge: card = position:relative, badge = position:absolute; top:8px; right:8px.</li>
+        <li>Fixed navbar: stays at top as you scroll. Add body padding-top so content doesn't hide behind it.</li>
+        <li>Modal overlay: position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5).</li>
+      </ol></div>
+    </div>
+
+    <div class="topic" id="css-responsive">
+      <div class="topic-header"><div class="topic-num" style="background:#3b82f6">9</div><h3>Responsive Design <span class="badge should">Should</span></h3></div>
+      <div class="card">
+        <div class="analogy">📱 <strong>Analogy:</strong> Media queries are a wardrobe that changes by weather. Hot day (big screen) = short sleeves (3 cols). Cold day (small screen) = coat (1 col, bigger text).</div>
+        <div class="code-block"><span class="c-cm">/* Mobile-first: write base styles for mobile, add @media for larger */</span>
+.grid { grid-template-columns: 1fr; }   <span class="c-cm">/* mobile: 1 col */</span>
+
+@media (min-width: 768px) {             <span class="c-cm">/* tablet+ */</span>
+  .grid { grid-template-columns: 1fr 1fr; }
+}
+@media (min-width: 1024px) {            <span class="c-cm">/* desktop+ */</span>
+  .grid { grid-template-columns: repeat(3, 1fr); }
+  .container { max-width: 1200px; margin: 0 auto; }
+}
+@media (max-width: 768px) {             <span class="c-cm">/* desktop-first alternative */</span>
+  .sidebar { display: none; }
+  .nav { flex-direction: column; }
+}</div>
+      </div>
+      <div class="exercise-box"><h4>✏️ Exercise</h4><ol>
+        <li>3-col cards. Add media query switching to 1 col on mobile. Test with DevTools.</li>
+        <li>Nav: horizontal on desktop, stacked on mobile (flex-direction: column inside media query).</li>
+        <li>Build a 2-col layout (sidebar + content) that stacks on mobile. Most common real-world pattern.</li>
+      </ol></div>
+    </div>
+
+    <div class="topic" id="css-pseudo">
+      <div class="topic-header"><div class="topic-num" style="background:#3b82f6">10</div><h3>Pseudo-classes <span class="badge nice">Nice</span></h3></div>
+      <div class="card">
+        <div class="code-block">button:hover { background: darkblue; cursor: pointer; }
+a:hover { color: purple; text-decoration: underline; }
+input:focus { outline: 2px solid blue; border-color: blue; }
+tr:nth-child(even) { background: #f2f2f2; }  <span class="c-cm">/* zebra rows */</span>
+li:first-child { color: red; }
+li:last-child  { color: blue; }</div>
+      </div>
+      <div class="exercise-box"><h4>✏️ Exercise</h4><ol>
+        <li>Style 3 buttons with :hover — change background. Always add <code>cursor: pointer</code>.</li>
+        <li>Style inputs: gray border default, blue border on :focus. Replace browser default outline.</li>
+        <li>Zebra-stripe table using tr:nth-child(even).</li>
+      </ol></div>
+    </div>
+
+    <div class="topic" id="css-transition">
+      <div class="topic-header"><div class="topic-num" style="background:#3b82f6">11</div><h3>Transitions <span class="badge nice">Nice</span></h3></div>
+      <div class="card">
+        <div class="code-block"><span class="c-cm">/* Put transition on the BASE state — animates both in AND out */</span>
+button {
+  background: blue;
+  transition: background 0.3s ease;     <span class="c-cm">/* property  duration  timing */</span>
+}
+button:hover { background: darkblue; }  <span class="c-cm">/* now it smoothly animates */</span>
+
+.card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+}</div>
+        <div class="tip"><strong>💡 Rule:</strong> Always put <code>transition</code> on the base state, not :hover — so animation plays on hover-in AND hover-out.</div>
+      </div>
+      <div class="exercise-box"><h4>✏️ Exercise</h4><ol>
+        <li>Button with background color transition. Try 0.1s (snappy), 0.5s (smooth), 1s (slow).</li>
+        <li>Card "lift" effect: transition transform + box-shadow on hover.</li>
+        <li>Nav link with bottom border on hover: start with <code>border-bottom: 2px solid transparent</code>, change color on :hover.</li>
+      </ol></div>
+    </div>
+
+  </div>
+</div>
+
+<div class="chapter-divider"></div>
+
+<!-- ══════════════════════════════════════════════
+     1.3 JAVASCRIPT
+══════════════════════════════════════════════ -->
+<div class="chapter-section">
+  <div class="chapter-banner" style="background:rgba(202,138,4,0.05);border-bottom-color:rgba(202,138,4,0.2)">
+    <h2><span style="color:#f7df1e">⚡</span> 1.3 JavaScript – Must Know</h2>
+    <p>The highest priority section. Variables to DOM manipulation to async fetch.</p>
+  </div>
+  <div class="content-area">
+
+    <div class="topic" id="js-variables">
+      <div class="topic-header"><div class="topic-num" style="background:#ca8a04">1</div><h3>Variables <span class="badge must">Must</span></h3></div>
+      <div class="card">
+        <div class="analogy">🗃️ <strong>Analogy:</strong> <code>const</code> = locked box (can't swap contents). <code>let</code> = unlocked box (can swap). <code>var</code> = old leaky box that causes bugs — avoid.</div>
+        <div class="code-block"><span class="c-kw">const</span> name = <span class="c-str">"Alice"</span>;   <span class="c-cm">// can't reassign — use for fixed values</span>
+<span class="c-kw">let</span> score = <span class="c-num">0</span>;         <span class="c-cm">// can reassign — use when value changes</span>
+score = <span class="c-num">10</span>;            <span class="c-cm">// ✅</span>
+<span class="c-cm">// name = "Bob"       // ❌ TypeError</span>
+<span class="c-kw">var</span> old = <span class="c-str">"avoid"</span>;     <span class="c-cm">// ❌ old way — don't use</span></div>
+        <div class="tip"><strong>💡 Rule:</strong> Always use <code>const</code> by default. Switch to <code>let</code> only when you know the value will change. Never use <code>var</code>.</div>
+      </div>
+      <div class="exercise-box"><h4>✏️ Exercise</h4><ol>
+        <li>Declare const name + let age. Log both. Try reassigning const — read the error.</li>
+        <li>Counter: <code>let count = 0</code>. Increment 5 times. Log after each.</li>
+        <li>const object: <code>const user = { name:"Alice" }</code>. Try <code>user.name = "Bob"</code> — it works! Const prevents reassigning the variable, not mutating the object.</li>
+      </ol></div>
+    </div>
+
+    <div class="topic" id="js-types">
+      <div class="topic-header"><div class="topic-num" style="background:#ca8a04">2</div><h3>Data Types <span class="badge must">Must</span></h3></div>
+      <div class="card">
+        <div class="code-block"><span class="c-kw">const</span> str  = <span class="c-str">"hello"</span>;              <span class="c-cm">// string</span>
+<span class="c-kw">const</span> tmpl = <span class="c-str">`Hello ${str}!`</span>;     <span class="c-cm">// template literal — embed with ${}</span>
+<span class="c-kw">const</span> num  = <span class="c-num">42</span>;                   <span class="c-cm">// number (int + float combined)</span>
+<span class="c-kw">const</span> bool = <span class="c-kw">true</span>;                 <span class="c-cm">// boolean</span>
+<span class="c-kw">let</span>   empty = <span class="c-kw">null</span>;               <span class="c-cm">// null — intentionally empty (you set it)</span>
+<span class="c-kw">let</span>   undef;                       <span class="c-cm">// undefined — JS sets it if unassigned</span>
+
+<span class="c-kw">typeof</span> <span class="c-str">"hi"</span>   <span class="c-cm">// "string"</span>
+<span class="c-kw">typeof</span> <span class="c-num">42</span>    <span class="c-cm">// "number"</span>
+<span class="c-kw">typeof</span> <span class="c-kw">null</span>  <span class="c-cm">// "object" ← famous JS bug, just know it</span></div>
+      </div>
+      <div class="exercise-box"><h4>✏️ Exercise</h4><ol>
+        <li>One variable of each type. Use typeof on each.</li>
+        <li>Template literal: <code>`My name is ${name}, I'm ${age} from ${city}.`</code></li>
+        <li>Access a missing property on an object → undefined. Access property on undefined → Error! Common bug to know.</li>
+      </ol></div>
+    </div>
+
+    <div class="topic" id="js-operators">
+      <div class="topic-header"><div class="topic-num" style="background:#ca8a04">3</div><h3>Operators <span class="badge must">Must</span></h3></div>
+      <div class="card">
+        <div class="code-block"><span class="c-cm">// Arithmetic</span>
+<span class="c-num">10</span> <span class="c-op">+</span> <span class="c-num">3</span>  <span class="c-cm">// 13</span>   <span class="c-num">10</span> <span class="c-op">-</span> <span class="c-num">3</span>  <span class="c-cm">// 7</span>   <span class="c-num">10</span> <span class="c-op">*</span> <span class="c-num">3</span>  <span class="c-cm">// 30</span>
+<span class="c-num">10</span> <span class="c-op">/</span> <span class="c-num">3</span>  <span class="c-cm">// 3.33</span> <span class="c-num">10</span> <span class="c-op">%</span> <span class="c-num">3</span>  <span class="c-cm">// 1 (remainder — great for even/odd)</span>
+
+<span class="c-cm">// Comparison — always returns boolean</span>
+<span class="c-num">5</span> <span class="c-op">===</span> <span class="c-num">5</span>   <span class="c-cm">// true  — strict equal (same value AND type) ← always use this</span>
+<span class="c-num">5</span> <span class="c-op">!==</span> <span class="c-num">3</span>   <span class="c-cm">// true  — strict not equal</span>
+<span class="c-num">5</span> <span class="c-op">==</span> <span class="c-str">"5"</span>  <span class="c-cm">// true  — loose (type coercion) ← AVOID</span>
+<span class="c-num">5</span> <span class="c-op">&gt;</span> <span class="c-num">3</span>    <span class="c-cm">// true</span>   <span class="c-num">5</span> <span class="c-op">&lt;</span> <span class="c-num">3</span>   <span class="c-cm">// false</span>
+
+<span class="c-cm">// Logical</span>
+<span class="c-kw">true</span> <span class="c-op">&amp;&amp;</span> <span class="c-kw">false</span>  <span class="c-cm">// false — AND</span>
+<span class="c-kw">true</span> <span class="c-op">||</span> <span class="c-kw">false</span>  <span class="c-cm">// true  — OR</span>
+<span class="c-op">!</span><span class="c-kw">true</span>          <span class="c-cm">// false — NOT</span>
+<span class="c-kw">const</span> port = env.PORT <span class="c-op">||</span> <span class="c-num">3000</span>;  <span class="c-cm">// fallback pattern — use everywhere</span></div>
+        <div class="warn"><strong>⚠️ Always use === never ==</strong>. Loose equality causes bugs: <code>"5" == 5</code> is true, <code>"5" === 5</code> is false.</div>
+      </div>
+    </div>
+
+    <div class="topic" id="js-conditions">
+      <div class="topic-header"><div class="topic-num" style="background:#ca8a04">4</div><h3>Conditions <span class="badge must">Must</span></h3></div>
+      <div class="card">
+        <div class="code-block"><span class="c-kw">if</span> (score >= <span class="c-num">90</span>) {
+  console.<span class="c-fn">log</span>(<span class="c-str">"A"</span>);
+} <span class="c-kw">else if</span> (score >= <span class="c-num">70</span>) {
+  console.<span class="c-fn">log</span>(<span class="c-str">"C"</span>);
+} <span class="c-kw">else</span> {
+  console.<span class="c-fn">log</span>(<span class="c-str">"Fail"</span>);
+}
+<span class="c-cm">// Ternary: condition ? "if true" : "if false"</span>
+<span class="c-kw">const</span> label = isLoggedIn ? <span class="c-str">"Logout"</span> : <span class="c-str">"Login"</span>;
+
+<span class="c-cm">// Falsy values (act like false): false, 0, "", null, undefined, NaN</span>
+<span class="c-cm">// Truthy surprises: "0", [], {} are ALL truthy!</span></div>
+      </div>
+      <div class="exercise-box"><h4>✏️ Exercise</h4><ol>
+        <li>Grade calculator: A(90+)/B(80+)/C(70+)/D(60+)/F with if/else if/else.</li>
+        <li>Rewrite pass/fail as ternary.</li>
+        <li>Test falsy: log each of 0, "", null, undefined, "0", [], {} in an if. Which ones run?</li>
+      </ol></div>
+    </div>
+
+    <div class="topic" id="js-loops">
+      <div class="topic-header"><div class="topic-num" style="background:#ca8a04">5</div><h3>Loops <span class="badge must">Must</span></h3></div>
+      <div class="card">
+        <div class="code-block"><span class="c-kw">for</span> (<span class="c-kw">let</span> i = <span class="c-num">0</span>; i < <span class="c-num">5</span>; i++) { console.<span class="c-fn">log</span>(i); }  <span class="c-cm">// 0,1,2,3,4</span>
+
+<span class="c-kw">let</span> count = <span class="c-num">0</span>;
+<span class="c-kw">while</span> (count < <span class="c-num">3</span>) { count++; }   <span class="c-cm">// always update — avoid infinite loop!</span>
+
+<span class="c-kw">const</span> fruits = [<span class="c-str">"apple"</span>, <span class="c-str">"banana"</span>];
+<span class="c-kw">for</span> (<span class="c-kw">const</span> fruit <span class="c-kw">of</span> fruits) { console.<span class="c-fn">log</span>(fruit); } <span class="c-cm">// cleanest for arrays</span></div>
+      </div>
+      <div class="exercise-box"><h4>✏️ Exercise</h4><ol>
+        <li>Print 1-10 with for. Then only even numbers (i % 2 === 0).</li>
+        <li>FizzBuzz 1-30: "Fizz" for ÷3, "Buzz" for ÷5, "FizzBuzz" for both.</li>
+        <li>Loop over array of 5 names, log "Hello, [name]!" for each.</li>
+      </ol></div>
+    </div>
+
+    <div class="topic" id="js-functions">
+      <div class="topic-header"><div class="topic-num" style="background:#ca8a04">6</div><h3>Functions <span class="badge must">Must</span></h3></div>
+      <div class="card">
+        <div class="code-block"><span class="c-cm">// Declaration (hoisted)</span>
+<span class="c-kw">function</span> <span class="c-fn">greet</span>(name) { <span class="c-kw">return</span> <span class="c-str">`Hello, ${name}!`</span>; }
+
+<span class="c-cm">// Arrow functions (modern)</span>
+<span class="c-kw">const</span> add = (a, b) => a + b;           <span class="c-cm">// implicit return (single expression)</span>
+<span class="c-kw">const</span> square = n => n * n;             <span class="c-cm">// single param, no parens needed</span>
+<span class="c-kw">const</span> sayHi = () => console.<span class="c-fn">log</span>(<span class="c-str">"Hi"</span>);<span class="c-cm">// no params</span>
+<span class="c-kw">const</span> multi = (a, b) => { <span class="c-kw">return</span> a * b; }; <span class="c-cm">// body needs return</span>
+
+<span class="c-cm">// Default parameters</span>
+<span class="c-kw">function</span> <span class="c-fn">greet</span>(name, role = <span class="c-str">"guest"</span>) { <span class="c-kw">return</span> `${name} (${role})`; }</div>
+      </div>
+      <div class="exercise-box"><h4>✏️ Exercise</h4><ol>
+        <li>Write <code>celsiusToFahrenheit(c)</code>: (c × 9/5) + 32. Test 0°C→32°F, 100°C→212°F.</li>
+        <li>Rewrite as arrow function.</li>
+        <li>Write <code>sum(numbers)</code> that takes an array and returns the total.</li>
+      </ol></div>
+    </div>
+
+    <div class="topic" id="js-arrays">
+      <div class="topic-header"><div class="topic-num" style="background:#ca8a04">7</div><h3>Arrays <span class="badge must">Must</span></h3></div>
+      <div class="card">
+        <div class="code-block"><span class="c-kw">const</span> nums = [<span class="c-num">1</span>, <span class="c-num">2</span>, <span class="c-num">3</span>, <span class="c-num">4</span>, <span class="c-num">5</span>];
+nums[<span class="c-num">0</span>];            <span class="c-cm">// 1  (first)</span>
+nums.<span class="c-fn">push</span>(<span class="c-num">6</span>);       <span class="c-cm">// add to end → [1,2,3,4,5,6]</span>
+nums.<span class="c-fn">pop</span>();         <span class="c-cm">// remove from end</span>
+
+<span class="c-cm">// Non-mutating — return NEW array:</span>
+nums.<span class="c-fn">map</span>(n => n * <span class="c-num">2</span>);             <span class="c-cm">// [2,4,6,8,10] — transform each</span>
+nums.<span class="c-fn">filter</span>(n => n % <span class="c-num">2</span> === <span class="c-num">0</span>);  <span class="c-cm">// [2,4] — keep if true</span>
+nums.<span class="c-fn">find</span>(n => n > <span class="c-num">3</span>);           <span class="c-cm">// 4 — first match</span>
+nums.<span class="c-fn">forEach</span>(n => console.<span class="c-fn">log</span>(n));<span class="c-cm">// run for each, returns nothing</span>
+nums.<span class="c-fn">includes</span>(<span class="c-num">3</span>);                <span class="c-cm">// true</span>
+nums.<span class="c-fn">join</span>(<span class="c-str">", "</span>);                 <span class="c-cm">// "1, 2, 3, 4, 5"</span></div>
+        <div class="tip"><strong>💡 map vs forEach:</strong> Use <code>map</code> when you want a NEW array. Use <code>forEach</code> when you just want to DO something (no return value).</div>
+      </div>
+      <div class="exercise-box"><h4>✏️ Exercise</h4><ol>
+        <li>Prices [10,25,8,40,15]: filter over $15, map to apply 10% discount, find first under $10.</li>
+        <li>Shopping cart: empty array, push items, pop last, log after each step.</li>
+        <li>Chain: numbers 1-10 → filter odd → map to squares.</li>
+      </ol></div>
+    </div>
+
+    <div class="topic" id="js-objects">
+      <div class="topic-header"><div class="topic-num" style="background:#ca8a04">8</div><h3>Objects <span class="badge must">Must</span></h3></div>
+      <div class="card">
+        <div class="code-block"><span class="c-kw">const</span> user = { name: <span class="c-str">"Alice"</span>, age: <span class="c-num">25</span>, address: { city: <span class="c-str">"Hanoi"</span> } };
+
+user.name;              <span class="c-cm">// "Alice" — dot notation</span>
+user[<span class="c-str">"name"</span>];          <span class="c-cm">// "Alice" — bracket notation</span>
+<span class="c-kw">const</span> k = <span class="c-str">"age"</span>; user[k]; <span class="c-cm">// dynamic key access</span>
+
+user.email = <span class="c-str">"a@b.com"</span>; <span class="c-cm">// add key</span>
+user.age = <span class="c-num">26</span>;           <span class="c-cm">// update</span>
+<span class="c-kw">delete</span> user.address;      <span class="c-cm">// remove</span>
+
+<span class="c-kw">const</span> { name, age } = user; <span class="c-cm">// destructuring — extract to variables</span>
+Object.<span class="c-fn">keys</span>(user);          <span class="c-cm">// ["name", "age"]</span>
+Object.<span class="c-fn">values</span>(user);        <span class="c-cm">// ["Alice", 26]</span></div>
+      </div>
+      <div class="exercise-box"><h4>✏️ Exercise</h4><ol>
+        <li>Product object: name, price, category, inStock. Access each both ways.</li>
+        <li><code>describeProduct(p)</code> function that returns a template literal sentence.</li>
+        <li>Array of 3 product objects. Filter to inStock only. Map to get only names.</li>
+      </ol></div>
+    </div>
+
+    <div class="topic" id="js-parse">
+      <div class="topic-header"><div class="topic-num" style="background:#ca8a04">9</div><h3>parseInt / parseFloat <span class="badge must">Must</span></h3></div>
+      <div class="card">
+        <div class="analogy">🔄 <strong>Analogy:</strong> Form inputs are always STRINGS. "42" + 1 = "421" (string concat). You must convert first. parseInt/parseFloat do that conversion.</div>
+        <div class="code-block"><span class="c-fn">parseInt</span>(<span class="c-str">"25"</span>);       <span class="c-cm">// 25</span>
+<span class="c-fn">parseInt</span>(<span class="c-str">"25.9"</span>);     <span class="c-cm">// 25 — drops decimal</span>
+<span class="c-fn">parseInt</span>(<span class="c-str">"10px"</span>);     <span class="c-cm">// 10 — stops at non-number</span>
+<span class="c-fn">parseInt</span>(<span class="c-str">"abc"</span>);      <span class="c-cm">// NaN</span>
+<span class="c-fn">parseFloat</span>(<span class="c-str">"3.14"</span>);  <span class="c-cm">// 3.14 — keeps decimals</span>
+<span class="c-fn">Number</span>(<span class="c-str">"42"</span>);        <span class="c-cm">// 42 — strict (Number("42px") = NaN)</span>
+<span class="c-kw">const</span> n = <span class="c-op">+</span>input;    <span class="c-cm">// shorthand for Number(input)</span></div>
+      </div>
+      <div class="exercise-box"><h4>✏️ Exercise</h4><ol>
+        <li>Two number inputs + button. Without parseInt: "2"+"3"="23". With it: 5. See the difference!</li>
+        <li>Build a temperature converter form. Read with parseFloat, compute, display result.</li>
+      </ol></div>
+    </div>
+
+    <div class="topic" id="js-isnan">
+      <div class="topic-header"><div class="topic-num" style="background:#ca8a04">10</div><h3>isNaN <span class="badge must">Must</span></h3></div>
+      <div class="card">
+        <div class="code-block"><span class="c-fn">isNaN</span>(<span class="c-num">42</span>);         <span class="c-cm">// false — valid number</span>
+<span class="c-fn">isNaN</span>(<span class="c-str">"hello"</span>);   <span class="c-cm">// true  — can't convert</span>
+<span class="c-fn">isNaN</span>(<span class="c-kw">NaN</span>);        <span class="c-cm">// true</span>
+<span class="c-cm">// NaN !== NaN — it's the only value not equal to itself!</span>
+<span class="c-cm">// That's why you need isNaN() — can't do (value === NaN)</span>
+
+<span class="c-cm">// Validate user input:</span>
+<span class="c-kw">const</span> num = <span class="c-fn">parseFloat</span>(input.value);
+<span class="c-kw">if</span> (<span class="c-fn">isNaN</span>(num)) { <span class="c-fn">alert</span>(<span class="c-str">"Enter a valid number!"</span>); <span class="c-kw">return</span>; }
+<span class="c-cm">// safe to use num now</span></div>
+      </div>
+      <div class="exercise-box"><h4>✏️ Exercise</h4><ol>
+        <li>Validated number input: read value, check with isNaN, show error or proceed.</li>
+        <li>Add isNaN validation to your temperature converter from Exercise 9.</li>
+      </ol></div>
+    </div>
+
+    <div class="topic" id="js-domselect">
+      <div class="topic-header"><div class="topic-num" style="background:#ca8a04">11</div><h3>DOM – Select <span class="badge must">Must</span></h3></div>
+      <div class="card">
+        <div class="analogy">🔍 <strong>Analogy:</strong> The DOM is a live tree of all HTML elements. Selecting elements = searching a filing cabinet. By unique ID, by CSS selector, or grab all matching items at once.</div>
+        <div class="code-block">document.<span class="c-fn">getElementById</span>(<span class="c-str">"btn"</span>);             <span class="c-cm">// by id (no # symbol)</span>
+document.<span class="c-fn">querySelector</span>(<span class="c-str">"h1"</span>);              <span class="c-cm">// first matching CSS selector</span>
+document.<span class="c-fn">querySelector</span>(<span class="c-str">".card"</span>);           <span class="c-cm">// by class</span>
+document.<span class="c-fn">querySelector</span>(<span class="c-str">"#header"</span>);        <span class="c-cm">// by id</span>
+document.<span class="c-fn">querySelector</span>(<span class="c-str">"input[type='email']"</span>);
+document.<span class="c-fn">querySelectorAll</span>(<span class="c-str">".card"</span>);      <span class="c-cm">// ALL matches (NodeList)</span>
+
+allCards.<span class="c-fn">forEach</span>(card => console.<span class="c-fn">log</span>(card)); <span class="c-cm">// loop NodeList</span></div>
+        <div class="warn"><strong>⚠️</strong> querySelector on missing element returns null. Calling methods on null = error. Always check <code>if (element)</code> first.</div>
+      </div>
+    </div>
+
+    <div class="topic" id="js-domcontent">
+      <div class="topic-header"><div class="topic-num" style="background:#ca8a04">12</div><h3>DOM – Content <span class="badge must">Must</span></h3></div>
+      <div class="card">
+        <div class="code-block"><span class="c-kw">const</span> el = document.<span class="c-fn">querySelector</span>(<span class="c-str">"#myDiv"</span>);
+
+el.innerText = <span class="c-str">"New text"</span>;                  <span class="c-cm">// set visible text</span>
+el.textContent = <span class="c-str">"New text"</span>;                 <span class="c-cm">// similar, includes hidden</span>
+el.innerHTML = <span class="c-str">"&lt;strong&gt;Bold!&lt;/strong&gt;"</span>;      <span class="c-cm">// renders HTML ⚠️ XSS risk</span>
+
+<span class="c-kw">const</span> input = document.<span class="c-fn">querySelector</span>(<span class="c-str">"#name"</span>);
+input.value;               <span class="c-cm">// get current typed value</span>
+input.value = <span class="c-str">""</span>;          <span class="c-cm">// clear input</span></div>
+        <div class="warn"><strong>⚠️ XSS with innerHTML!</strong> Never do <code>el.innerHTML = userInput</code>. A user could inject script tags. Use textContent for user-supplied text.</div>
+      </div>
+      <div class="exercise-box"><h4>✏️ Exercise</h4><ol>
+        <li>Button that changes a div's text. Try innerHTML to add a &lt;strong&gt; tag.</li>
+        <li>Form input: on button click, read value, display in a div, clear the input.</li>
+        <li>Character counter: input that shows "X / 100 chars" below, updating on each keyup.</li>
+      </ol></div>
+    </div>
+
+    <div class="topic" id="js-domchange">
+      <div class="topic-header"><div class="topic-num" style="background:#ca8a04">13</div><h3>DOM – Change Styles &amp; Classes <span class="badge must">Must</span></h3></div>
+      <div class="card">
+        <div class="code-block"><span class="c-kw">const</span> box = document.<span class="c-fn">querySelector</span>(<span class="c-str">".box"</span>);
+
+<span class="c-cm">// element.style — camelCase, must include units</span>
+box.style.color = <span class="c-str">"red"</span>;
+box.style.backgroundColor = <span class="c-str">"blue"</span>;  <span class="c-cm">// not background-color!</span>
+box.style.display = <span class="c-str">"none"</span>;
+
+<span class="c-cm">// classList — preferred (keeps CSS in CSS files)</span>
+box.classList.<span class="c-fn">add</span>(<span class="c-str">"active"</span>);
+box.classList.<span class="c-fn">remove</span>(<span class="c-str">"active"</span>);
+box.classList.<span class="c-fn">toggle</span>(<span class="c-str">"active"</span>);     <span class="c-cm">// add if missing, remove if present</span>
+box.classList.<span class="c-fn">contains</span>(<span class="c-str">"active"</span>);  <span class="c-cm">// true/false</span>
+
+document.body.classList.<span class="c-fn">toggle</span>(<span class="c-str">"dark-mode"</span>); <span class="c-cm">// dark mode toggle!</span></div>
+      </div>
+      <div class="exercise-box"><h4>✏️ Exercise</h4><ol>
+        <li>Dark/light mode toggle button. On click, toggle class "dark" on body. Style .dark in CSS.</li>
+        <li>Tab component: 3 buttons, 3 content divs. On click, remove "active" from all, add to clicked one.</li>
+      </ol></div>
+    </div>
+
+    <div class="topic" id="js-domcreate">
+      <div class="topic-header"><div class="topic-num" style="background:#ca8a04">14</div><h3>DOM – Create &amp; Add Elements <span class="badge must">Must</span></h3></div>
+      <div class="card">
+        <div class="code-block"><span class="c-cm">// createElement + appendChild — best practice</span>
+<span class="c-kw">const</span> li = document.<span class="c-fn">createElement</span>(<span class="c-str">"li"</span>);
+li.textContent = <span class="c-str">"New item"</span>;
+document.<span class="c-fn">querySelector</span>(<span class="c-str">"ul"</span>).<span class="c-fn">appendChild</span>(li);
+
+<span class="c-cm">// innerHTML += — quick but re-renders whole container</span>
+document.<span class="c-fn">querySelector</span>(<span class="c-str">"ul"</span>).innerHTML += <span class="c-str">`&lt;li&gt;Item&lt;/li&gt;`</span>;
+
+parent.<span class="c-fn">prepend</span>(el);   <span class="c-cm">// add at START</span>
+el.<span class="c-fn">remove</span>();         <span class="c-cm">// remove element</span>
+
+<span class="c-cm">// Real pattern: todo item with delete button</span>
+<span class="c-kw">function</span> <span class="c-fn">addTodo</span>(text) {
+  <span class="c-kw">const</span> li = document.<span class="c-fn">createElement</span>(<span class="c-str">"li"</span>);
+  li.textContent = text;
+  <span class="c-kw">const</span> btn = document.<span class="c-fn">createElement</span>(<span class="c-str">"button"</span>);
+  btn.textContent = <span class="c-str">"✕"</span>;
+  btn.addEventListener(<span class="c-str">"click"</span>, () => li.<span class="c-fn">remove</span>());
+  li.<span class="c-fn">appendChild</span>(btn);
+  document.<span class="c-fn">querySelector</span>(<span class="c-str">"#list"</span>).<span class="c-fn">appendChild</span>(li);
+}</div>
+      </div>
+      <div class="exercise-box"><h4>✏️ Exercise</h4><ol>
+        <li>To-Do list: input + Add button. Create li, append to ul, clear input.</li>
+        <li>Add ✕ button to each li. On click, removes its parent li.</li>
+        <li>"No tasks yet" message: show when list is empty, hide when items exist.</li>
+      </ol></div>
+    </div>
+
+    <div class="topic" id="js-events">
+      <div class="topic-header"><div class="topic-num" style="background:#ca8a04">15</div><h3>Events <span class="badge must">Must</span></h3></div>
+      <div class="card">
+        <div class="code-block">btn.addEventListener(<span class="c-str">"click"</span>, () => console.<span class="c-fn">log</span>(<span class="c-str">"clicked"</span>));
+el.addEventListener(<span class="c-str">"submit"</span>, fn);    <span class="c-cm">// form submit</span>
+el.addEventListener(<span class="c-str">"change"</span>, fn);    <span class="c-cm">// value changed (select, checkbox)</span>
+el.addEventListener(<span class="c-str">"input"</span>, fn);     <span class="c-cm">// every keystroke</span>
+el.addEventListener(<span class="c-str">"keydown"</span>, fn);   <span class="c-cm">// key pressed</span>
+el.addEventListener(<span class="c-str">"mouseover"</span>, fn); <span class="c-cm">// mouse enters</span></div>
+      </div>
+      <div class="exercise-box"><h4>✏️ Exercise</h4><ol>
+        <li>Button that changes page background to a random color on each click.</li>
+        <li>"input" listener on text field — display current value in a div in real-time.</li>
+        <li>keydown listener on document: press Escape to close a modal.</li>
+      </ol></div>
+    </div>
+
+    <div class="topic" id="js-eventobj">
+      <div class="topic-header"><div class="topic-num" style="background:#ca8a04">16</div><h3>Event Object <span class="badge must">Must</span></h3></div>
+      <div class="card">
+        <div class="code-block">btn.addEventListener(<span class="c-str">"click"</span>, (event) => {
+  event.target;        <span class="c-cm">// the element that was clicked</span>
+  event.target.id;     <span class="c-cm">// its id attribute</span>
+  event.target.value;  <span class="c-cm">// its value (for inputs)</span>
+});
+
+<span class="c-cm">// preventDefault — stop default browser behavior</span>
+form.addEventListener(<span class="c-str">"submit"</span>, (e) => {
+  e.<span class="c-fn">preventDefault</span>();  <span class="c-cm">// stop page reload!</span>
+  <span class="c-cm">// handle with JS instead</span>
+});
+
+<span class="c-cm">// Event delegation — one listener handles all children</span>
+document.<span class="c-fn">querySelector</span>(<span class="c-str">"ul"</span>).addEventListener(<span class="c-str">"click"</span>, (e) => {
+  <span class="c-kw">if</span> (e.target.tagName === <span class="c-str">"LI"</span>) { e.target.classList.<span class="c-fn">toggle</span>(<span class="c-str">"done"</span>); }
+});</div>
+        <div class="tip"><strong>💡 preventDefault is crucial for forms.</strong> Without it, submit causes a page reload and you lose all JS state.</div>
+      </div>
+      <div class="exercise-box"><h4>✏️ Exercise</h4><ol>
+        <li>Form submit listener. Call preventDefault. Log field values. Confirm page does NOT reload.</li>
+        <li>Event delegation on ul: one click listener, toggle "done" on any li. Works on dynamically added items too!</li>
+      </ol></div>
+    </div>
+
+    <div class="topic" id="js-json">
+      <div class="topic-header"><div class="topic-num" style="background:#ca8a04">17</div><h3>JSON <span class="badge should">Should</span></h3></div>
+      <div class="card">
+        <div class="analogy">📦 <strong>Analogy:</strong> JSON is the universal shipping format. <code>stringify</code> = pack object into a box (text string). <code>parse</code> = unpack the box back into a JS object.</div>
+        <div class="code-block"><span class="c-kw">const</span> user = { name: <span class="c-str">"Alice"</span>, age: <span class="c-num">25</span> };
+<span class="c-kw">const</span> json = JSON.<span class="c-fn">stringify</span>(user);   <span class="c-cm">// '{"name":"Alice","age":25}'</span>
+JSON.<span class="c-fn">stringify</span>(user, <span class="c-kw">null</span>, <span class="c-num">2</span>);       <span class="c-cm">// pretty-print (debugging)</span>
+<span class="c-kw">const</span> back = JSON.<span class="c-fn">parse</span>(json);       <span class="c-cm">// back to object</span>
+back.name; <span class="c-cm">// "Alice"</span></div>
+      </div>
+    </div>
+
+    <div class="topic" id="js-storage">
+      <div class="topic-header"><div class="topic-num" style="background:#ca8a04">18</div><h3>localStorage <span class="badge should">Should</span></h3></div>
+      <div class="card">
+        <div class="code-block">localStorage.<span class="c-fn">setItem</span>(<span class="c-str">"name"</span>, <span class="c-str">"Alice"</span>);
+localStorage.<span class="c-fn">getItem</span>(<span class="c-str">"name"</span>);           <span class="c-cm">// "Alice" (null if missing)</span>
+localStorage.<span class="c-fn">removeItem</span>(<span class="c-str">"name"</span>);
+localStorage.<span class="c-fn">clear</span>();
+
+<span class="c-cm">// Objects must be stringified:</span>
+localStorage.<span class="c-fn">setItem</span>(<span class="c-str">"todos"</span>, JSON.<span class="c-fn">stringify</span>(todos));
+<span class="c-kw">const</span> saved = JSON.<span class="c-fn">parse</span>(localStorage.<span class="c-fn">getItem</span>(<span class="c-str">"todos"</span>)) || [];</div>
+      </div>
+      <div class="exercise-box"><h4>✏️ Exercise</h4><ol>
+        <li>Save a name. Refresh page. Confirm it's still there (DevTools → Application → Local Storage).</li>
+        <li>Upgrade To-Do app: save list on every change, load on page startup. Todos persist across refreshes!</li>
+        <li>Visit counter: increment and save count each visit. Display "You've visited X times".</li>
+      </ol></div>
+    </div>
+
+    <div class="topic" id="js-timeout">
+      <div class="topic-header"><div class="topic-num" style="background:#ca8a04">19</div><h3>setTimeout / setInterval <span class="badge nice">Nice</span></h3></div>
+      <div class="card">
+        <div class="code-block"><span class="c-fn">setTimeout</span>(() => console.<span class="c-fn">log</span>(<span class="c-str">"After 2s"</span>), <span class="c-num">2000</span>); <span class="c-cm">// run ONCE after delay</span>
+
+<span class="c-kw">const</span> id = <span class="c-fn">setInterval</span>(() => console.<span class="c-fn">log</span>(<span class="c-str">"Every 1s"</span>), <span class="c-num">1000</span>);
+<span class="c-fn">clearInterval</span>(id); <span class="c-cm">// ALWAYS store and clear when done!</span></div>
+      </div>
+      <div class="exercise-box"><h4>✏️ Exercise</h4><ol>
+        <li>Show a notification div, auto-hide after 3 seconds with setTimeout.</li>
+        <li>Live clock: display time, update every second with setInterval using <code>new Date().toLocaleTimeString()</code>.</li>
+        <li>Countdown from 10 to 0, then "Time's up!" and clearInterval.</li>
+      </ol></div>
+    </div>
+
+    <div class="topic" id="js-fetch">
+      <div class="topic-header"><div class="topic-num" style="background:#ca8a04">20</div><h3>Fetch / Async-Await <span class="badge nice">Nice</span></h3></div>
+      <div class="card">
+        <div class="code-block"><span class="c-kw">async function</span> <span class="c-fn">getUsers</span>() {
+  <span class="c-kw">try</span> {
+    <span class="c-kw">const</span> response = <span class="c-kw">await</span> <span class="c-fn">fetch</span>(<span class="c-str">"https://jsonplaceholder.typicode.com/users"</span>);
+    <span class="c-kw">const</span> data = <span class="c-kw">await</span> response.<span class="c-fn">json</span>();  <span class="c-cm">// parse as JSON</span>
+    <span class="c-cm">// use data...</span>
+    data.<span class="c-fn">forEach</span>(u => list.innerHTML += <span class="c-str">`&lt;li&gt;${u.name}&lt;/li&gt;`</span>);
+  } <span class="c-kw">catch</span> (err) { console.<span class="c-fn">error</span>(err); }
+}
+<span class="c-fn">getUsers</span>();</div>
+      </div>
+      <div class="exercise-box"><h4>✏️ Exercise</h4><ol>
+        <li>Fetch users from jsonplaceholder.typicode.com/users. Display names in a list.</li>
+        <li>Add loading state: show "Loading..." while fetching, hide when done.</li>
+        <li>Fetch random dog image from dog.ceo/api/breeds/image/random. Display it. "New Dog" button fetches again.</li>
+      </ol></div>
+    </div>
+
+  </div>
+</div>
+
+<div class="chapter-divider"></div>
+
+<!-- ══════════════════════════════════════════════
+     1.4 SQL
+══════════════════════════════════════════════ -->
+<div class="chapter-section">
+  <div class="chapter-banner" style="background:rgba(14,165,233,0.05);border-bottom-color:rgba(14,165,233,0.2)">
+    <h2><span style="color:#38bdf8">📊</span> 1.4 SQL – Must Know</h2>
+    <p>Query databases, retrieve data, create/update/delete records — essential for backend.</p>
+  </div>
+  <div class="content-area">
+
+    <div class="topic" id="sql-concepts">
+      <div class="topic-header"><div class="topic-num" style="background:#0ea5e9">1</div><h3>Core Concepts <span class="badge must">Must</span></h3></div>
+      <div class="card">
+        <div class="analogy">🗄️ <strong>Analogy:</strong> Database = filing cabinet. Table = one drawer (Users, Products). Row = one file in that drawer. Column = a specific field on each file (name, age, email).</div>
+        <div class="code-block"><span class="c-cm">-- A table looks like a spreadsheet:</span>
+<span class="c-cm">-- id | name    | email             | age</span>
+<span class="c-cm">--  1 | Alice   | alice@example.com | 25</span>
+<span class="c-cm">--  2 | Bob     | bob@example.com   | 30</span>
+<span class="c-cm">-- id = primary key (unique, auto-increment)</span>
+<span class="c-cm">-- CRUD = Create(INSERT) Read(SELECT) Update(UPDATE) Delete(DELETE)</span></div>
+      </div>
+    </div>
+
+    <div class="topic" id="sql-select">
+      <div class="topic-header"><div class="topic-num" style="background:#0ea5e9">2</div><h3>SELECT &amp; WHERE <span class="badge must">Must</span></h3></div>
+      <div class="card">
+        <div class="code-block"><span class="c-sql">SELECT</span> * <span class="c-sql">FROM</span> users;                           <span class="c-cm">-- all rows, all cols</span>
+<span class="c-sql">SELECT</span> name, email <span class="c-sql">FROM</span> users;               <span class="c-cm">-- specific cols</span>
+<span class="c-sql">SELECT</span> * <span class="c-sql">FROM</span> users <span class="c-sql">WHERE</span> id = <span class="c-num">1</span>;           <span class="c-cm">-- exact match</span>
+<span class="c-sql">SELECT</span> * <span class="c-sql">FROM</span> users <span class="c-sql">WHERE</span> age > <span class="c-num">18</span>;         <span class="c-cm">-- comparison</span>
+<span class="c-sql">SELECT</span> * <span class="c-sql">FROM</span> users <span class="c-sql">WHERE</span> name = <span class="c-str">'Alice'</span>;  <span class="c-cm">-- string match</span>
+<span class="c-sql">SELECT</span> * <span class="c-sql">FROM</span> users <span class="c-sql">WHERE</span> name <span class="c-sql">LIKE</span> <span class="c-str">'A%'</span>;  <span class="c-cm">-- starts with A</span>
+<span class="c-sql">SELECT</span> * <span class="c-sql">FROM</span> users <span class="c-sql">ORDER BY</span> age <span class="c-sql">ASC</span>;      <span class="c-cm">-- sort ascending</span>
+<span class="c-sql">SELECT</span> * <span class="c-sql">FROM</span> users <span class="c-sql">ORDER BY</span> name <span class="c-sql">DESC</span>;    <span class="c-cm">-- sort descending</span>
+<span class="c-sql">SELECT</span> * <span class="c-sql">FROM</span> users <span class="c-sql">LIMIT</span> <span class="c-num">10</span>;              <span class="c-cm">-- first 10 rows only</span></div>
+      </div>
+    </div>
+
+    <div class="topic" id="sql-crud">
+      <div class="topic-header"><div class="topic-num" style="background:#0ea5e9">3</div><h3>INSERT / UPDATE / DELETE <span class="badge must">Must</span></h3></div>
+      <div class="card">
+        <div class="code-block"><span class="c-sql">INSERT INTO</span> users (name, email, age) <span class="c-sql">VALUES</span> (<span class="c-str">'Dave'</span>, <span class="c-str">'dave@test.com'</span>, <span class="c-num">28</span>);
+
+<span class="c-sql">UPDATE</span> users <span class="c-sql">SET</span> age = <span class="c-num">29</span> <span class="c-sql">WHERE</span> id = <span class="c-num">4</span>;
+<span class="c-sql">UPDATE</span> users <span class="c-sql">SET</span> name = <span class="c-str">'David'</span>, age = <span class="c-num">29</span> <span class="c-sql">WHERE</span> id = <span class="c-num">4</span>;
+
+<span class="c-sql">DELETE FROM</span> users <span class="c-sql">WHERE</span> id = <span class="c-num">4</span>;</div>
+        <div class="warn"><strong>⚠️ Always use WHERE with UPDATE and DELETE!</strong> Forgetting WHERE updates/deletes ALL rows. <code>DELETE FROM users</code> = entire table gone!</div>
+      </div>
+    </div>
+
+    <div class="topic" id="sql-aggregate">
+      <div class="topic-header"><div class="topic-num" style="background:#0ea5e9">4</div><h3>Aggregates &amp; JOIN <span class="badge should">Should</span></h3></div>
+      <div class="card">
+        <div class="code-block"><span class="c-sql">SELECT COUNT</span>(*) <span class="c-sql">FROM</span> users;            <span class="c-cm">-- total rows</span>
+<span class="c-sql">SELECT AVG</span>(age) <span class="c-sql">FROM</span> users;            <span class="c-cm">-- average</span>
+<span class="c-sql">SELECT SUM</span>(price) <span class="c-sql">FROM</span> orders;         <span class="c-cm">-- sum</span>
+<span class="c-sql">SELECT MAX</span>(age), <span class="c-sql">MIN</span>(age) <span class="c-sql">FROM</span> users;  <span class="c-cm">-- max and min</span>
+
+<span class="c-cm">-- JOIN: combine two tables</span>
+<span class="c-sql">SELECT</span> users.name, orders.product
+<span class="c-sql">FROM</span> users
+<span class="c-sql">JOIN</span> orders <span class="c-sql">ON</span> users.id = orders.user_id;
+<span class="c-cm">-- Links users.id (primary key) with orders.user_id (foreign key)</span></div>
+      </div>
+      <div class="exercise-box"><h4>✏️ SQL Exercises</h4><ol>
+        <li>Design a "students" table. Write SELECT queries: all, only A students, scores above 80.</li>
+        <li>INSERT yourself as a student. UPDATE your score. DELETE a student by id.</li>
+        <li>COUNT all students, AVG score, MAX score.</li>
+        <li>Practice on <a href="https://sqliteonline.com" style="color:#38bdf8">sqliteonline.com</a> — free, runs in browser.</li>
+        <li>Explain CRUD out loud: Create=INSERT, Read=SELECT, Update=UPDATE, Delete=DELETE. Common interview question!</li>
+      </ol></div>
+    </div>
+
+  </div>
+</div>
+
+<div class="chapter-divider"></div>
+
+<!-- ══════════════════════════════════════════════
+     1.5 PHP
+══════════════════════════════════════════════ -->
+<div class="chapter-section">
+  <div class="chapter-banner" style="background:rgba(129,140,248,0.05);border-bottom-color:rgba(129,140,248,0.2)">
+    <h2><span style="color:#818cf8">🐘</span> 1.5 PHP – Must Know</h2>
+    <p>Server-side scripting — handle forms, talk to databases, generate dynamic HTML.</p>
+  </div>
+  <div class="content-area">
+
+    <div class="topic" id="php-syntax">
+      <div class="topic-header"><div class="topic-num" style="background:#6366f1">1</div><h3>Syntax &amp; Variables <span class="badge must">Must</span></h3></div>
+      <div class="card">
+        <div class="analogy">🖥️ <strong>Analogy:</strong> PHP runs on the SERVER before the page reaches the browser. The browser = customer. PHP = the kitchen. The customer sees the finished plate (HTML). Never sees the kitchen (PHP code).</div>
+        <div class="code-block"><span class="c-cm">&lt;!-- PHP goes inside &lt;?php ... ?&gt; --&gt;</span>
+<span class="c-tag">&lt;?php</span>
+<span class="c-phpv">$name</span> = <span class="c-str">"Alice"</span>;           <span class="c-cm">// variables always start with $</span>
+<span class="c-phpv">$age</span> = <span class="c-num">25</span>;
+<span class="c-kw">echo</span> <span class="c-str">"Hello, "</span> . <span class="c-phpv">$name</span>;    <span class="c-cm">// dot = string concat in PHP</span>
+<span class="c-kw">echo</span> <span class="c-str">"&lt;p&gt;Age: {$age}&lt;/p&gt;"</span>; <span class="c-cm">// {} embeds vars in double quotes</span>
+
+<span class="c-phpv">$fruits</span> = [<span class="c-str">"apple"</span>, <span class="c-str">"banana"</span>];
+<span class="c-kw">echo</span> <span class="c-phpv">$fruits</span>[<span class="c-num">0</span>];            <span class="c-cm">// "apple"</span>
+
+<span class="c-phpv">$user</span> = [<span class="c-str">"name"</span> => <span class="c-str">"Alice"</span>, <span class="c-str">"age"</span> => <span class="c-num">25</span>]; <span class="c-cm">// associative array (like JS object)</span>
+<span class="c-kw">echo</span> <span class="c-phpv">$user</span>[<span class="c-str">"name"</span>];          <span class="c-cm">// "Alice"</span>
+
+<span class="c-kw">if</span> (<span class="c-phpv">$age</span> >= <span class="c-num">18</span>) { <span class="c-kw">echo</span> <span class="c-str">"Adult"</span>; } <span class="c-kw">else</span> { <span class="c-kw">echo</span> <span class="c-str">"Minor"</span>; }
+
+<span class="c-kw">foreach</span> (<span class="c-phpv">$fruits</span> <span class="c-kw">as</span> <span class="c-phpv">$fruit</span>) { <span class="c-kw">echo</span> <span class="c-str">"&lt;li&gt;{$fruit}&lt;/li&gt;"</span>; }
+<span class="c-tag">?&gt;</span></div>
+      </div>
+      <div class="exercise-box"><h4>✏️ Exercise</h4><ol>
+        <li>PHP page: declare $name, echo "Hello, [name]!" inside HTML.</li>
+        <li>Loop over an array with foreach and output each as a &lt;li&gt;.</li>
+      </ol></div>
+    </div>
+
+    <div class="topic" id="php-forms">
+      <div class="topic-header"><div class="topic-num" style="background:#6366f1">2</div><h3>$_GET &amp; $_POST <span class="badge must">Must</span></h3></div>
+      <div class="card">
+        <div class="code-block"><span class="c-cm">&lt;!-- HTML form submits to process.php --&gt;</span>
+&lt;form action=<span class="c-str">"process.php"</span> method=<span class="c-str">"post"</span>&gt;
+  &lt;input type=<span class="c-str">"text"</span> name=<span class="c-str">"username"</span>&gt;
+  &lt;button type=<span class="c-str">"submit"</span>&gt;Login&lt;/button&gt;
+&lt;/form&gt;
+
+<span class="c-cm">&lt;!-- process.php --&gt;</span>
+<span class="c-tag">&lt;?php</span>
+<span class="c-cm">// $_POST: from method="post" form</span>
+<span class="c-phpv">$username</span> = <span class="c-phpv">$_POST</span>[<span class="c-str">"username"</span>];
+
+<span class="c-cm">// $_GET: from URL (?id=5&sort=asc)</span>
+<span class="c-phpv">$id</span> = <span class="c-phpv">$_GET</span>[<span class="c-str">"id"</span>];
+
+<span class="c-kw">if</span> (<span class="c-phpv">$_SERVER</span>[<span class="c-str">"REQUEST_METHOD"</span>] === <span class="c-str">"POST"</span>) {
+  <span class="c-kw">if</span> (<span class="c-fn">empty</span>(<span class="c-phpv">$username</span>)) {
+    <span class="c-kw">echo</span> <span class="c-str">"Username required!"</span>;
+  } <span class="c-kw">else</span> {
+    <span class="c-phpv">$safe</span> = <span class="c-fn">htmlspecialchars</span>(<span class="c-phpv">$username</span>); <span class="c-cm">// sanitize for HTML output</span>
+    <span class="c-kw">echo</span> <span class="c-str">"Welcome, {$safe}!"</span>;
+  }
+}
+<span class="c-tag">?&gt;</span></div>
+      </div>
+      <div class="exercise-box"><h4>✏️ Exercise</h4><ol>
+        <li>HTML form → process.php. Read and display $_POST values.</li>
+        <li>Add validation: show error if empty, success message if filled.</li>
+        <li>Search form (method="get"). Read $_GET — see query in URL.</li>
+      </ol></div>
+    </div>
+
+    <div class="topic" id="php-session">
+      <div class="topic-header"><div class="topic-num" style="background:#6366f1">3</div><h3>Sessions &amp; DB Connect <span class="badge should">Should</span></h3></div>
+      <div class="card">
+        <div class="code-block"><span class="c-tag">&lt;?php</span>
+<span class="c-fn">session_start</span>();             <span class="c-cm">// MUST be called before any output!</span>
+<span class="c-phpv">$_SESSION</span>[<span class="c-str">"user_id"</span>] = <span class="c-num">1</span>;   <span class="c-cm">// remember across pages</span>
+
+<span class="c-kw">if</span> (<span class="c-fn">isset</span>(<span class="c-phpv">$_SESSION</span>[<span class="c-str">"user_id"</span>])) {
+  <span class="c-kw">echo</span> <span class="c-str">"Logged in"</span>;
+} <span class="c-kw">else</span> {
+  <span class="c-fn">header</span>(<span class="c-str">"Location: login.php"</span>); <span class="c-cm">// redirect</span>
+}
+<span class="c-fn">session_destroy</span>();            <span class="c-cm">// logout</span>
+
+<span class="c-cm">// DB Connection (mysqli)</span>
+<span class="c-phpv">$conn</span> = <span class="c-kw">new</span> <span class="c-fn">mysqli</span>(<span class="c-str">"localhost"</span>, <span class="c-str">"root"</span>, <span class="c-str">""</span>, <span class="c-str">"mydb"</span>);
+<span class="c-phpv">$result</span> = <span class="c-phpv">$conn</span>-><span class="c-fn">query</span>(<span class="c-str">"SELECT * FROM users"</span>);
+<span class="c-kw">while</span> (<span class="c-phpv">$row</span> = <span class="c-phpv">$result</span>-><span class="c-fn">fetch_assoc</span>()) { <span class="c-kw">echo</span> <span class="c-phpv">$row</span>[<span class="c-str">"name"</span>]; }
+<span class="c-tag">?&gt;</span></div>
+        <div class="warn"><strong>⚠️ SQL Injection!</strong> NEVER: <code>"SELECT * FROM users WHERE name='$name'"</code>. User can type <code>' OR '1'='1</code> and get all data. Always use prepared statements: <code>$stmt = $conn->prepare("...WHERE name=?"); $stmt->bind_param("s", $name);</code></div>
+      </div>
+      <div class="exercise-box"><h4>✏️ Exercise</h4><ol>
+        <li>Build a login flow: hardcode username/password, compare to $_POST, use session to remember across pages.</li>
+        <li>Create a protected page that redirects to login if not logged in.</li>
+        <li>Logout page: call session_destroy() and redirect to login.</li>
+      </ol></div>
+    </div>
+
+  </div>
+</div>
+
+<div class="chapter-divider"></div>
+
+<!-- ══════════════════════════════════════════════
+     1.6 REACT
+══════════════════════════════════════════════ -->
+<div class="chapter-section">
+  <div class="chapter-banner" style="background:rgba(34,211,238,0.05);border-bottom-color:rgba(34,211,238,0.2)">
+    <h2><span style="color:#22d3ee">⚛️</span> 1.6 React – Must Know</h2>
+    <p>Build interactive UIs with components, props, and state. The most popular frontend library.</p>
+  </div>
+  <div class="content-area">
+
+    <div class="topic" id="react-jsx">
+      <div class="topic-header"><div class="topic-num" style="background:#06b6d4">1</div><h3>What is React + JSX <span class="badge must">Must</span></h3></div>
+      <div class="card">
+        <div class="analogy">🧩 <strong>Analogy:</strong> React is LEGO for UIs. You build small, reusable pieces (components) and snap them together. Each piece can have settings (props) and memory (state). Change one block, only that block updates — not the whole page.</div>
+        <div class="code-block"><span class="c-cm">// JSX: HTML-like syntax inside JavaScript — compiles to JS</span>
+<span class="c-kw">function</span> <span class="c-fn">Hello</span>() {
+  <span class="c-kw">const</span> name = <span class="c-str">"Alice"</span>;
+  <span class="c-kw">const</span> isLoggedIn = <span class="c-kw">true</span>;
+  <span class="c-kw">return</span> (
+    <span class="c-jsx">&lt;div&gt;</span>
+      <span class="c-jsx">&lt;h1&gt;</span>{name}<span class="c-jsx">&lt;/h1&gt;</span>                    <span class="c-cm">// {} = any JS expression</span>
+      <span class="c-jsx">&lt;p&gt;</span>{<span class="c-num">2</span> + <span class="c-num">2</span>}<span class="c-jsx">&lt;/p&gt;</span>                      <span class="c-cm">// renders "4"</span>
+      <span class="c-jsx">&lt;p&gt;</span>{isLoggedIn ? <span class="c-str">"Welcome!"</span> : <span class="c-str">"Login"</span>}<span class="c-jsx">&lt;/p&gt;</span>
+      <span class="c-jsx">&lt;div</span> <span class="c-jxa">className</span>=<span class="c-str">"card"</span><span class="c-jsx">&gt;</span>...<span class="c-jsx">&lt;/div&gt;</span>       <span class="c-cm">// class → className</span>
+      <span class="c-jsx">&lt;img</span> <span class="c-jxa">src</span>=<span class="c-str">"x.jpg"</span> <span class="c-jxa">alt</span>=<span class="c-str">"x"</span> <span class="c-jsx">/&gt;</span>           <span class="c-cm">// must self-close with /&gt;</span>
+    <span class="c-jsx">&lt;/div&gt;</span>
+  );
+}
+<span class="c-cm">// JSX differences: class→className, for→htmlFor, style={{color:'red'}}, onclick→onClick</span></div>
+      </div>
+    </div>
+
+    <div class="topic" id="react-components">
+      <div class="topic-header"><div class="topic-num" style="background:#06b6d4">2</div><h3>Components &amp; Props <span class="badge must">Must</span></h3></div>
+      <div class="card">
+        <div class="code-block"><span class="c-cm">// Component = function that returns JSX. Name MUST start with UpperCase.</span>
+<span class="c-kw">function</span> <span class="c-fn">UserCard</span>({ name, age, role }) {  <span class="c-cm">// destructure props</span>
+  <span class="c-kw">return</span> (
+    <span class="c-jsx">&lt;div</span> <span class="c-jxa">className</span>=<span class="c-str">"card"</span><span class="c-jsx">&gt;</span>
+      <span class="c-jsx">&lt;h2&gt;</span>{name}<span class="c-jsx">&lt;/h2&gt;</span>
+      <span class="c-jsx">&lt;p&gt;</span>Age: {age} | Role: {role}<span class="c-jsx">&lt;/p&gt;</span>
+    <span class="c-jsx">&lt;/div&gt;</span>
+  );
+}
+
+<span class="c-kw">function</span> <span class="c-fn">App</span>() {
+  <span class="c-kw">return</span> (
+    <span class="c-jsx">&lt;div&gt;</span>
+      <span class="c-jsx">&lt;UserCard</span> <span class="c-jxa">name</span>=<span class="c-str">"Alice"</span> <span class="c-jxa">age</span>={<span class="c-num">25</span>} <span class="c-jxa">role</span>=<span class="c-str">"Admin"</span> <span class="c-jsx">/&gt;</span>
+      <span class="c-jsx">&lt;UserCard</span> <span class="c-jxa">name</span>=<span class="c-str">"Bob"</span>   <span class="c-jxa">age</span>={<span class="c-num">30</span>} <span class="c-jxa">role</span>=<span class="c-str">"User"</span>  <span class="c-jsx">/&gt;</span>
+    <span class="c-jsx">&lt;/div&gt;</span>
+  );
+}
+
+<span class="c-cm">// Rendering a list: map() + key prop (required!)</span>
+<span class="c-kw">const</span> users = [{ id:<span class="c-num">1</span>, name:<span class="c-str">"Alice"</span> }, { id:<span class="c-num">2</span>, name:<span class="c-str">"Bob"</span> }];
+<span class="c-kw">function</span> <span class="c-fn">List</span>() {
+  <span class="c-kw">return</span> <span class="c-jsx">&lt;ul&gt;</span>{users.<span class="c-fn">map</span>(u => <span class="c-jsx">&lt;li</span> <span class="c-jxa">key</span>={u.id}<span class="c-jsx">&gt;</span>{u.name}<span class="c-jsx">&lt;/li&gt;</span>)}<span class="c-jsx">&lt;/ul&gt;</span>;
+}</div>
+        <div class="tip"><strong>💡 Props are read-only!</strong> A component never modifies its own props. Data flows one direction: parent → child. This makes bugs easier to find.</div>
+      </div>
+    </div>
+
+    <div class="topic" id="react-state">
+      <div class="topic-header"><div class="topic-num" style="background:#06b6d4">3</div><h3>useState <span class="badge must">Must</span></h3></div>
+      <div class="card">
+        <div class="analogy">🧠 <strong>Analogy:</strong> State = a component's memory. A regular variable forgets its value after every render. State remembers. When state changes, React automatically re-renders — you never touch the DOM manually.</div>
+        <div class="code-block"><span class="c-kw">import</span> { useState } <span class="c-kw">from</span> <span class="c-str">'react'</span>;
+
+<span class="c-kw">function</span> <span class="c-fn">Counter</span>() {
+  <span class="c-cm">// [currentValue, setterFunction] = useState(initialValue)</span>
+  <span class="c-kw">const</span> [count, setCount] = <span class="c-fn">useState</span>(<span class="c-num">0</span>);
+  <span class="c-kw">return</span> (
+    <span class="c-jsx">&lt;div&gt;</span>
+      <span class="c-jsx">&lt;p&gt;</span>Count: {count}<span class="c-jsx">&lt;/p&gt;</span>
+      <span class="c-jsx">&lt;button</span> <span class="c-jxa">onClick</span>={() => <span class="c-fn">setCount</span>(count + <span class="c-num">1</span>)}<span class="c-jsx">&gt;</span>+<span class="c-jsx">&lt;/button&gt;</span>
+      <span class="c-jsx">&lt;button</span> <span class="c-jxa">onClick</span>={() => <span class="c-fn">setCount</span>(<span class="c-num">0</span>)}<span class="c-jsx">&gt;</span>Reset<span class="c-jsx">&lt;/button&gt;</span>
+    <span class="c-jsx">&lt;/div&gt;</span>
+  );
+}
+
+<span class="c-cm">// Controlled input — form handling in React</span>
+<span class="c-kw">function</span> <span class="c-fn">LoginForm</span>() {
+  <span class="c-kw">const</span> [email, setEmail] = <span class="c-fn">useState</span>(<span class="c-str">""</span>);
+  <span class="c-kw">return</span> (
+    <span class="c-jsx">&lt;form</span> <span class="c-jxa">onSubmit</span>{e => { e.<span class="c-fn">preventDefault</span>(); console.<span class="c-fn">log</span>(email); }}<span class="c-jsx">&gt;</span>
+      <span class="c-jsx">&lt;input</span>
+        <span class="c-jxa">type</span>=<span class="c-str">"email"</span>
+        <span class="c-jxa">value</span>={email}
+        <span class="c-jxa">onChange</span>={e => <span class="c-fn">setEmail</span>(e.target.value)}
+      <span class="c-jsx">/&gt;</span>
+      <span class="c-jsx">&lt;button&gt;</span>Submit<span class="c-jsx">&lt;/button&gt;</span>
+    <span class="c-jsx">&lt;/form&gt;</span>
+  );
+}</div>
+      </div>
+      <div class="exercise-box"><h4>✏️ React Exercises</h4><ol>
+        <li>Counter component: +, - and Reset buttons using useState.</li>
+        <li>Toggle component: button shows/hides a text block. State: boolean.</li>
+        <li>ProductCard component: accepts name, price, category as props. Render 3 with different data.</li>
+        <li>Todo list: useState for input value + items array. Add on button click, display all.</li>
+        <li>Controlled login form: name + email fields, log values on submit. onChange keeps state in sync.</li>
+      </ol></div>
+    </div>
+
+  </div>
+</div>
+
+<div class="chapter-divider"></div>
+
+<!-- ══════════════════════════════════════════════
+     1.7 BOOTSTRAP
+══════════════════════════════════════════════ -->
+<div class="chapter-section">
+  <div class="chapter-banner" style="background:rgba(124,58,237,0.05);border-bottom-color:rgba(124,58,237,0.2)">
+    <h2><span style="color:#a78bfa">🎨</span> 1.7 Bootstrap – Nice to Know</h2>
+    <p>Pre-built CSS classes for responsive layouts, components, and utilities. Build UIs fast.</p>
+  </div>
+  <div class="content-area">
+
+    <div class="topic" id="bs-grid">
+      <div class="topic-header"><div class="topic-num" style="background:#7c3aed">1</div><h3>Grid System <span class="badge nice">Nice</span></h3></div>
+      <div class="card">
+        <div class="analogy">📐 <strong>Analogy:</strong> Bootstrap divides every row into 12 slices. col-6 = 6 slices (half). col-4 = 4 slices (third). col-md-6 = 6 slices on medium+ screens, full-width on mobile. Free responsive layout with zero CSS!</div>
+        <div class="code-block"><span class="c-cm">&lt;!-- Add Bootstrap CDN in &lt;head&gt; --&gt;</span>
+&lt;link rel=<span class="c-str">"stylesheet"</span> href=<span class="c-str">"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"</span>&gt;
+
+<span class="c-cm">&lt;!-- Grid: container → row → col(s) --&gt;</span>
+&lt;div class=<span class="c-str">"container"</span>&gt;         <span class="c-cm">&lt;!-- centered max-width wrapper --&gt;</span>
+  &lt;div class=<span class="c-str">"row"</span>&gt;
+    &lt;div class=<span class="c-str">"col"</span>&gt;Equal 1&lt;/div&gt;      <span class="c-cm">&lt;!-- auto-split --&gt;</span>
+    &lt;div class=<span class="c-str">"col"</span>&gt;Equal 2&lt;/div&gt;
+    &lt;div class=<span class="c-str">"col-8"</span>&gt;Main (8/12)&lt;/div&gt;   <span class="c-cm">&lt;!-- fixed size --&gt;</span>
+    &lt;div class=<span class="c-str">"col-4"</span>&gt;Sidebar&lt;/div&gt;
+    &lt;div class=<span class="c-str">"col-12 col-md-6"</span>&gt;Responsive card&lt;/div&gt; <span class="c-cm">&lt;!-- full on mobile, half on md+ --&gt;</span>
+    &lt;div class=<span class="c-str">"col-12 col-md-6"</span>&gt;Responsive card&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</div>
+      </div>
+    </div>
+
+    <div class="topic" id="bs-components">
+      <div class="topic-header"><div class="topic-num" style="background:#7c3aed">2</div><h3>Components &amp; Utilities <span class="badge nice">Nice</span></h3></div>
+      <div class="card">
+        <div class="code-block"><span class="c-cm">&lt;!-- BUTTONS --&gt;</span>
+&lt;button class=<span class="c-str">"btn btn-primary"</span>&gt;Blue&lt;/button&gt;
+&lt;button class=<span class="c-str">"btn btn-danger"</span>&gt;Red&lt;/button&gt;
+&lt;button class=<span class="c-str">"btn btn-outline-secondary"</span>&gt;Outline&lt;/button&gt;
+
+<span class="c-cm">&lt;!-- CARD --&gt;</span>
+&lt;div class=<span class="c-str">"card"</span>&gt;
+  &lt;img src=<span class="c-str">"..."</span> class=<span class="c-str">"card-img-top"</span> alt=<span class="c-str">"..."</span>&gt;
+  &lt;div class=<span class="c-str">"card-body"</span>&gt;
+    &lt;h5 class=<span class="c-str">"card-title"</span>&gt;Title&lt;/h5&gt;
+    &lt;p class=<span class="c-str">"card-text"</span>&gt;Description&lt;/p&gt;
+    &lt;a href=<span class="c-str">"#"</span> class=<span class="c-str">"btn btn-primary"</span>&gt;Go&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+<span class="c-cm">&lt;!-- FORM --&gt;</span>
+&lt;input type=<span class="c-str">"text"</span> class=<span class="c-str">"form-control"</span> placeholder=<span class="c-str">"Name"</span>&gt;
+&lt;select class=<span class="c-str">"form-select"</span>&gt;...&lt;/select&gt;
+
+<span class="c-cm">&lt;!-- UTILITIES: flexbox, spacing, text --&gt;</span>
+&lt;div class=<span class="c-str">"d-flex justify-content-between align-items-center gap-3"</span>&gt;...&lt;/div&gt;
+<span class="c-cm">&lt;!-- Spacing: m=margin p=padding, t/b/s/e/x/y for sides, 1-5 scale --&gt;</span>
+&lt;div class=<span class="c-str">"mt-3 mb-4 px-2"</span>&gt;...&lt;/div&gt;   <span class="c-cm">&lt;!-- 3=16px 4=24px 2=8px --&gt;</span>
+&lt;p class=<span class="c-str">"text-center text-muted fw-bold"</span>&gt;Styled text&lt;/p&gt;
+&lt;div class=<span class="c-str">"bg-primary text-white p-3 rounded"</span>&gt;Blue box&lt;/div&gt;</div>
+        <div class="tip"><strong>💡 Bootstrap spacing scale:</strong> 1=4px, 2=8px, 3=16px, 4=24px, 5=48px. So <code>m-3</code> = 16px margin all sides.</div>
+      </div>
+      <div class="exercise-box"><h4>✏️ Bootstrap Exercises</h4><ol>
+        <li>Include Bootstrap CDN. Rebuild your profile page using grid, btn classes, form-control for inputs.</li>
+        <li>3-card row: col-12 col-md-4. Resize window — they stack automatically. Zero CSS written!</li>
+        <li>Build a navbar with <code>navbar navbar-expand-md</code> classes: logo left, 3 nav links right.</li>
+        <li>Style a div with only Bootstrap utilities — NO custom CSS: <code>d-flex justify-content-center align-items-center bg-light p-4 rounded shadow</code>.</li>
+      </ol></div>
+    </div>
+
+  </div>
+</div>
+
+  <footer>
+    Full Stack Study Guide · HTML · CSS · JavaScript · SQL · PHP · React · Bootstrap<br>
+    All 7 subjects · 60+ topics · 100+ exercises · Happy learning! 🎓
+  </footer>
+
+</div><!-- /main-content -->
+
+<script>
+  function toggleSidebar() {
+    document.getElementById('sidebar').classList.toggle('open');
+    document.getElementById('overlay').classList.toggle('open');
+  }
+
+  // Active link highlight on scroll
+  const links = document.querySelectorAll('.chapter-links a');
+  const topics = document.querySelectorAll('.topic');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        links.forEach(l => l.classList.remove('active'));
+        const active = document.querySelector(`.chapter-links a[href="#${entry.target.id}"]`);
+        if (active) active.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-10% 0px -80% 0px' });
+
+  topics.forEach(t => observer.observe(t));
+</script>
+
+</body>
+</html>
